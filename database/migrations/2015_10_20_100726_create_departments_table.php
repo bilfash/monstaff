@@ -16,6 +16,7 @@ class CreateDepartmentsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
+			$table->string('biro');
 			$table->boolean('enabled');
 			$table->integer('photo');
 			$table->timestamps();

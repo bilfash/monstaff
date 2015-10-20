@@ -14,7 +14,73 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		// $this->call('UserTableSeeder');
+		$this->call('DepartmentsTableSeeder');
+    $this->call('PositionsTableSeeder');
+    
 	}
 
+}
+
+/*class DepartmentsTableSeeder extends Seeder {
+ 
+       public function run()
+       {
+         //delete users table records
+         DB::table('departments')->delete();
+         DB::table('departments')->insert(array(
+             array('name'=>'john','enabled'=>'1'),
+             array('name'=>'mark','enabled'=>'1'),
+             array('name'=>'Karl','enabled'=>'1'),
+             array('name'=>'marl','enabled'=>'1'),
+             array('name'=>'mary','enabled'=>'1'),
+             array('name'=>'sels','enabled'=>'1'),
+             array('name'=>'taylor','enabled'=>'1',),
+
+          ));
+       }
+ 
+}*/
+
+class DepartmentsTableSeeder extends Seeder {
+ 
+       public function run()
+       {
+         //delete users table records
+         DB::table('departments')->delete();
+         DB::table('departments')->insert(array(
+             array('name'=>'Kaderisasi dan Pemetaan','enabled'=>'1'),
+             array('name'=>'Dalam Negeri','enabled'=>'1'),
+             array('name'=>'Hubungan Luar','enabled'=>'1'),
+             array('name'=>'Kewirausahaan','enabled'=>'1'),
+             array('name'=>'Minat Bakat','enabled'=>'1'),
+             array('name'=>'Pengembangan Profesi','enabled'=>'1'),
+             array('name'=>'Riset dan Teknologi','enabled'=>'1',),
+             array('name'=>'Media Informasi','enabled'=>'1'),
+             array('name'=>'Kesejahteraan Mahasiswa','enabled'=>'1',)
+          ));
+       }
+ 
+}
+
+class PositionsTableSeeder extends Seeder {
+ 
+       public function run()
+       {
+         //delete users table records
+         DB::table('positions')->delete();
+         DB::table('positions')->insert(array(
+             array('name'=>'Ketua Himpunan','enabled'=>'1'),
+             array('name'=>'Wakahima Internal','enabled'=>'1'),
+             array('name'=>'Wakahima Eksternal','enabled'=>'1'),
+             array('name'=>'Bendahara Umum','enabled'=>'1'),
+             array('name'=>'Sekretaris Umum','enabled'=>'1',),
+             array('name'=>'Kepala Departemen','enabled'=>'1'),
+             array('name'=>'Sekretaris Departemen','enabled'=>'1'),
+             array('name'=>'Kepala Biro','enabled'=>'1'),
+             array('name'=>'Staff Ahli','enabled'=>'1'),
+             array('name'=>'Staff Ahli Biro','enabled'=>'1',),
+             array('name'=>'Staff','enabled'=>'1',)
+          ));
+       }
+ 
 }

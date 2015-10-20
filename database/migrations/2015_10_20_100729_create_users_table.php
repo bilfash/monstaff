@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration {
 			$table->tinyInteger('positionid');
 			$table->integer('photo');
 			$table->timestamps();
-
-/*			$table->foreign('deptid')->references('id')->on('departments')->onUpdate('cascade')->onDelete('set null');
+/*
+			$table->foreign('id')->references('id')->on('departments')->onUpdate('cascade')->onDelete('set null');
 			$table->foreign('positionid')->references('id')->on('positions')->onUpdate('cascade')->onDelete('set null');*/
 
 		});
