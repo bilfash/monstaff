@@ -15,12 +15,12 @@ class CreateEventsTable extends Migration {
 		Schema::create('events', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('name');
-			$table->dateTime('start');
-			$table->dateTime('end');
-			$table->integer('signedby');
-			$table->boolean('enabled');
-			$table->timestamps();
+			$table->string('name')->nullable();
+			$table->dateTime('start')->nullable();
+			$table->dateTime('end')->nullable();
+			$table->boolean('enabled')->nullable();
+			$table->softDeletes();
+            $table->nullableTimestamps();
 
 			/*$table->foreign('signedby')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');*/
 		});

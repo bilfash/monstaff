@@ -15,10 +15,11 @@ class CreateMarksTable extends Migration {
 		Schema::create('marks', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('userid');
-			$table->integer('questionid');
-			$table->string('string');
-			$table->timestamps();
+			$table->integer('userid')->nullable();
+			$table->integer('questionid')->nullable();
+			$table->string('string')->nullable();
+			$table->softDeletes();
+            $table->nullableTimestamps();
 
 			/*$table->foreign('questionid')->references('id')->on('questions')->onUpdate('cascade')->onDelete('set null');
 			$table->foreign('userid')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');*/

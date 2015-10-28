@@ -15,9 +15,10 @@ class CreatePositionsTable extends Migration {
 		Schema::create('positions', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('name');
-			$table->boolean('enabled');
-			$table->timestamps();
+			$table->string('name')->nullable();
+			$table->boolean('enabled')->nullable();
+			$table->softDeletes();
+            $table->nullableTimestamps();
 		});
 	}
 

@@ -15,9 +15,10 @@ class CreatePermissionsTable extends Migration {
 		Schema::create('permissions', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('menuid');
-			$table->integer('positionid');
-			$table->timestamps();
+			$table->integer('menuid')->nullable();
+			$table->integer('departmentid')->nullable();
+			$table->softDeletes();
+            $table->nullableTimestamps();
 			/*$table->foreign('menuid')->references('id')->on('menus')->onUpdate('cascade')->onDelete('cascade');
 			$table->foreign('positionid')->references('id')->on('positions')->onUpdate('cascade')->onDelete('cascade');*/
 		});

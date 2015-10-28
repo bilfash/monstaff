@@ -15,10 +15,10 @@ class CreateFeedbacksTable extends Migration {
 		Schema::create('feedbacks', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('userid');
-			$table->string('content');
-			$table->integer('eventid');
-			$table->timestamps();
+			$table->integer('userid')->nullable();
+			$table->string('content')->nullable();
+			$table->softDeletes();
+            $table->nullableTimestamps();
 
 			/*$table->foreign('eventid')->references('id')->on('events')->onUpdate('cascade')->onDelete('set null');
 			$table->foreign('userid')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');*/

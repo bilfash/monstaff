@@ -1,4 +1,4 @@
-<?php
+v <?php
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
@@ -48,6 +48,7 @@ class DepartmentsTableSeeder extends Seeder {
          //delete users table records
          DB::table('departments')->delete();
          DB::table('departments')->insert(array(
+             array('name'=>'Non Departemen','enabled'=>'1'),
              array('name'=>'Kaderisasi dan Pemetaan','enabled'=>'1'),
              array('name'=>'Dalam Negeri','enabled'=>'1'),
              array('name'=>'Hubungan Luar','enabled'=>'1'),
