@@ -31,7 +31,7 @@ class AdminController extends Controller {
 		//--wajib
 
 		$this->data['user'] = User::where('deleted_at', null)->count();
-		$this->data['user_disabled'] = User::where('deleted_at', null)->count();
+		$this->data['user_disabled'] = User::where('deleted_at', !null)->count();
 		$this->data['department'] = Department::where('enabled', 1)->count();
 		$this->data['position'] = Position::where('enabled', 1)->count();
 
@@ -45,7 +45,10 @@ class AdminController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		//wajib
+		$this->check__();
+		$this->data['role'] = 1;
+		//--wajib
 	}
 
 	/**

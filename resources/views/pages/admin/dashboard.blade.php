@@ -24,57 +24,41 @@
             <!-- small box -->
             <div class="small-box bg-green">
                 <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
-                    <p>Bounce Rate</p>
+                    <h3>{{$position}}</h3>
+                    <p>Jabatan</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="{{ URL::to('position') }}" class="small-box-footer"><i class="ion-android-apps"></i></a>
             </div>
         </div><!-- ./col -->
         <div class="col-lg-3 col-xs-6">
             <!-- small box -->
             <div class="small-box bg-yellow">
                 <div class="inner">
-                    <h3>44</h3>
-                    <p>User Registrations</p>
+                    <h3>{{$user}}</h3>
+                    <p>User Aktif</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-person-add"></i>
+                    <i class="ion ion-happy-outline"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="{{ URL::to('user') }}" class="small-box-footer"><i class="ion-android-apps"></i></a>
             </div>
         </div><!-- ./col -->
         <div class="col-lg-3 col-xs-6">
             <!-- small box -->
             <div class="small-box bg-red">
                 <div class="inner">
-                    <h3>65</h3>
-                    <p>Unique Visitors</p>
+                    <h3>{{$user_disabled}}</h3>
+                    <p>User Non-Aktif</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-pie-graph"></i>
+                    <i class="ion ion-sad-outline"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="{{ URL::to('user') }}" class="small-box-footer"><i class="ion-android-apps"></i></a>
             </div>
         </div><!-- ./col -->
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-solid">
-                <div class="box-header with-border">
-                    <i class="fa fa-text-width"></i>
-                    <h3 class="box-title">Block Quotes</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body">
-                    <blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                    </blockquote>
-                </div><!-- /.box-body -->
-            </div>
-        </div>
     </div>
 </section>
 

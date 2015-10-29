@@ -20,6 +20,16 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+// dashboard
 Route::get('admin', 'AdminController@index');
 Route::get('nondept', 'NonDeptController@index');
 Route::get('dept', 'DeptController@index');
+
+// department
+Route::get('department','DepartmentController@index');
+Route::get('department/detail/{id}','DepartmentController@detail');
+Route::get('department/delete/{id}','DepartmentController@delete');
+Route::get('department/create','DepartmentController@create');
+Route::post('department/create', array('before' =>'csrf', 'uses' => 'DepartmentController@create'));
+Route::get('department/update/{id}','DepartmentController@update');
+Route::post('department/update/{id}', array('before' =>'csrf', 'uses' => 'DepartmentController@update'));
