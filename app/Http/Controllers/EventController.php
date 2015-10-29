@@ -59,9 +59,18 @@ class EventController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function delete($id)
 	{
-		//
+
+		if($department = Event::find($id)){
+				$department->enabled = 0;
+				$department->delete();
+				return redirect('event');
+		}
+		else
+		{
+			return redirect('event')->withErrors($department);
+		}
 	}
 
 	/**
