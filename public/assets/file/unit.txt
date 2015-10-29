@@ -1,0 +1,68 @@
+1|Rektorat|1|IT2
+2|Senat|2|IT2.V
+3|Dewan Pertimbangan|2|IT2.VI
+4|Dewan Pengawas|2|IT2.VII
+5|Satuan Pengawas|2|IT2.VIII
+6|Fakultas Matematika dan Ilmu Pengetahuan Alam (F-MIPA)|3|IT2.1
+7|Fakultas Teknologi Industri (FTI)|3|IT2.2
+8|Fakultas Teknik Sipil dan Perencanaan (FTSP)|3|IT2.3
+9|Fakultas Teknologi Kelautan|3|IT2.4
+10|Fakultas Teknologi Informasi|3|IT2.5
+11|Fakultas Desain dan Industri Kreatif|3|IT2.6
+12|Program Pascasarjana (PPs)|3|IT2.7
+13|Biro Akademik, Kemahasiswaan, dan Perencanaan|3|IT2.8
+14|Biro Keuangan dan Sarana Prasarana|3|IT2.9
+15|Biro Umum|3|IT2.10
+16|Lembaga Penelitian dan Pengabdian Masyarakat|3|IT2.11
+17|Lembaga Pengembangan Pendidikan, Kemahasiswaan, dan Hubungan Alumni|3|12
+18|Lembaga Pengembangan Teknologi Sistem Informasi|3|13
+19|Lembaga Penjaminan Mutu, Pengelolaan, dan Perlindungan Kekayaan Intelektual|3|14
+20|Badan Inovasi dan Bisnis Ventura|3|IT2.15
+21|UPT Perpustakaan|3|IT2.16
+22|UPT Bahasa dan Budaya|3|IT2.17
+23|UPT Kearsipan|3|IT2.18
+24|UPT Kerjasama & Hubungan Internasional|3|IT2.19
+25|UPT P. Mata Kuliah Sosial Humaniora|3|IT2.20
+26|UPT Pengelola Mata Kuliah Bersama|3|IT2.21
+27|UPT Keamanan dan Keselamatan|3|IT2.22
+28|Pejabat Pembuat Komitmen|3|IT2.23
+29|Wakil Rektor I|2|IT2.I
+30|Wakil Rektor II|2|IT2.II
+31|Wakil Rektor III|2|IT2.III
+32|Wakil Rektor IV|2|IT2.IV
+33|Jurusan Fisika|5|IT2.1.I.1
+34|Jurusan Matematika|5|IT2.1.I.2
+35|Jurusan Statistika|5|IT2.1.I.3
+36|Program Studi D3 Statistika|6|IT2.1.I.3.1
+37|Jurusan Kimia|5|IT2.1.I.4
+38|Jurusan Biologi|5|IT2.1.I.5
+39|Jurusan Teknik Mesin|5|IT2.2.I.1
+40|Program Studi D3 Teknik Mesin|6|IT2.2.I.1.1
+41|Jurusan Teknik Elektro|5|IT2.2.I.2
+42|Program Studi D3 Teknik Elektro|6|IT2.2.I.2.1
+43|Program Pascasarjana Teknik Elektro|6|IT2.2.I.2.2
+44|Jurusan Teknik Kimia|5|IT2.2.I.3
+45|Program Studi D3 Teknik Kimia|6|IT2.2.I.3.1
+46|Jurusan Teknik Fisika|5|IT2.2.I.4
+47|Program Studi D3 Teknik Fisika|6|IT2.2.I.4.1
+48|Jurusan Teknik Industri|5|IT2.2.I.5
+49|Jurusan Teknik Material dan Metalurgi|5|IT2.2.I.6
+50|Jurusan Multimedia & Jaringan|5|IT2.2.I.7
+51|Jurusan Manajemen Bisnis|5|IT2.2.I.8
+52|Jurusan Teknik Sipil|5|IT2.3.I.1
+53|Program Studi D3 Teknik Sipil|6|IT2.3.I.1.1
+54|Jurusan Arsitektur|5|IT2.3.I.2
+55|Jurusan Teknik Lingkungan|5|IT2.3.I.3
+56|Jurusan Teknik Geomatika|5|IT2.3.I.4
+57|Jurusan P. Wilayah dan Kota|5|IT2.3.I.5
+58|Jurusan Teknik Geofisika|5|IT2.3.I.6
+59|Jurusan Teknik Perkapalan|5|IT2.4.I.1
+60|Jurusan T. Sistem Perkapalan|5|IT2.4.I.2
+61|Jurusan Teknik Kelautan|5|IT2.4.I.3
+62|Jurusan Transportasi Laut|5|IT2.4.I.4
+63|Jurusan Teknik Informatika|5|IT2.5.I.1
+64|Jurusan Sistem Informasi|5|IT2.5.I.2
+65|Jurusan Desain Produk Industri|5|IT2.6.I.1
+66|Jurusan Desain Interior|5|IT2.6.I.2
+67|Jurusan Desain Komunikasi Visual|5|IT2.6.I.3
+68|Program Studi MMT|4|IT2.7.II

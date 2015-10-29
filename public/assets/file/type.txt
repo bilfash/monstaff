@@ -1,0 +1,16 @@
+1|Peraturan
+2|Keputusan
+3|Surat Edaran
+4|Surat Dinas
+5|Surat Undangan
+6|Surat Tugas
+7|Surat Pengantar
+8|Surat Perjanjian
+9|Surat Kuasa
+10|Surat Keterangan
+11|Surat Pernyataan
+12|Surat Pengumuman
+13|Berita Acara
+14|Notulen Rapat
+15|Telaah Staf
+16|Memo

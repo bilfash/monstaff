@@ -46,7 +46,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function department()
     {
-        return $this->belongsTo('App\Department', 'deptid', 'id');
+        return $this->belongsTo('App\Department', 'deptid');
     }
 
     public function position()

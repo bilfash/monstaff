@@ -20,7 +20,7 @@ class Department extends Model {
 
     public function user()
     {
-    	return $this->hasMany('App\User', 'departmentid', 'id');
+    	return $this->hasMany('App\User', 'deptid', 'id');
     }
 
     public function permission()

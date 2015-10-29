@@ -19,3 +19,7 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('admin', 'AdminController@index');
+Route::get('nondept', 'NonDeptController@index');
+Route::get('dept', 'DeptController@index');

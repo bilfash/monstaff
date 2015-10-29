@@ -1,0 +1,762 @@
+1|Pendidikan Pengajaran|PP| 1| 0| 1
+2|Kemahasiswaan|KM| 1| 0| 1
+3|Penelitian|PN| 1| 0| 1
+4|Pengabdian Kepada Masyarakat|PM| 1| 0| 1
+5|Tata Pamong Perguruan Tinggi|DT| 1| 0| 1
+6|Data Dan Informasi Akademik|AK| 1| 0| 1
+7|Hukum|HK| 1| 0| 1
+8|Organisasi|OT| 1| 0| 1
+9|Kerjasama|KS| 1| 0| 1
+10|Hubungan Masyarakat|HM| 1| 0| 1
+11|Perencanaan|PR| 1| 0| 1
+12|Perlengkapan|LK| 1| 0| 1
+13|Ketatausahaan|TU| 1| 0| 1
+14|Kerumahtanggaan|RT| 1| 0| 1
+15|Informatika/Sim/Tik|TI| 1| 0| 1
+16|Pendidikan Dan Pelatihan|DL| 1| 0| 1
+17|Pengawasan|WS| 1| 0| 1
+18|Lain-Lain|LL| 1| 0| 1
+19|Keuangan|KU| 1| 0| 1
+20|Kepegawaian|KP| 1| 0| 1
+21|PENERIMAAN MAHASISWA BARU|PP.00| 2| 1| 1
+22|Registrasi  mahasiswa meliputi :|PP.01| 2| 1| 1
+23|Perkuliahan|PP.02| 2| 1| 1
+24|Kurikulum|PP.03| 2| 1| 1
+25|Program Studi|PP.04| 2| 1| 1
+26|Evaluasi Mahasiswa |PP.05| 2| 1| 1
+27|Kelulusan (Yudisium)|PP.06| 2| 1| 1
+28|Dosen|PP.07| 2| 1| 1
+29|Penunjang Pendidikan|PP.08| 2| 1| 1
+30|Alumni|PP.09| 2| 1| 1
+31|Status mahasiswa meliputi:|KM.00| 2| 2| 1
+32|Dispensasi Tidak Mengikuti Kuliah|KM.01| 2| 2| 1
+33|Kesejahteraan dan Fasilitas Mahasiswa meliputi:|KM.02| 2| 2| 1
+34|Organisasi Mahasiswa meliputi :|KM.03| 2| 2| 1
+35|Himpunan Orang Tua Mahasiswa/ IKOMA|KM.04| 2| 2| 1
+36|Kegiatan Mahasiswa|KM.05| 2| 2| 1
+37|Lomba Kegiatan Kemahasiswaan/ Lokal /Nasional/Internasional|KM.06| 2| 2| 1
+38|Pengembangan Seni budaya dan olahraga|KM.07| 2| 2| 1
+39|Mahasiswa Berprestasi|KM.08| 2| 2| 1
+40|Mahasiswa Meninggal Dunia|KM.09| 2| 2| 1
+41|Berkas Perorangan Mahasiswa|KM.10| 2| 0| 1
+42|Penawaran Penelitian|PN.00| 2| 3| 1
+43|Perencanaan Penelitian meliputi|PN.01| 2| 3| 1
+44|Evaluasi hasil Penelitian|PN.02| 2| 3| 1
+45|Publikasi hasil penelitian|PN.03| 2| 3| 1
+46|Forum Komunikasi Penelitian Dan Pengembangan|PN.04| 2| 3| 1
+47|Data Statistik Penelitian|PN.05| 2| 3| 1
+48|Seminar Lokakarya Temukarya Workshop Hasil Penelitian|PN.06| 2| 3| 1
+49|Sosialisasi dan Desiminasi hasil Penelitian Pengkajian dan Pengembangan|PN.07| 2| 3| 1
+50|Kerjasama|PN.08| 2| 3| 1
+51|Penyuluhan Sosial|PM.00| 2| 4| 1
+52|Bantuan Sosial|PM.01| 2| 4| 1
+53|Kuliah Kerja NyataKKN meliputi :|PM.02| 2| 4| 1
+54|Penemuan Dan Penerapan Teknologi Terbaru Pada Masyarakat|PM.03| 2| 4| 1
+55|Praktek Kerja Di masyarakat|PM.04| 2| 4| 1
+56|Kerjasama|PM.05| 2| 4| 1
+57|Majelis Wali Amanah|DT.00| 2| 5| 1
+58|Senat Akademik|DT.01| 2| 5| 1
+59|Dewan Guru Besar meliputi:|DT.02| 2| 5| 1
+60|Perencanaan Program Kerja Pembinaan Penilaian Pengembangan Komisi Guru Besar|DT.03| 2| 5| 1
+61|Badan Penjamin Mutu Akademik|DT.04| 2| 5| 1
+62|Badan Audit Internal|DT.05| 2| 5| 1
+63|Data Akademik |AK.00| 2| 6| 1
+64|Data Mahasiswa|AK.01| 2| 6| 1
+65|Statistik Perguruan Tinggi|AK.02| 2| 6| 1
+66|Informasi Akademik|AK.03| 2| 6| 1
+67|PERATURAN|HK.00| 2| 7| 1
+68|Statuta|OT.00| 2| 8| 1
+69|Struktur tugas dan fungsi organisasi PTN dan Kopertis |OT.01| 2| 8| 1
+70|Tata Kerja Organisasi|OT.02| 2| 8| 1
+71|Uraian/Analisis Jabatan/Analisis Managemen serta penyusunan ketatalaksanaan|OT.03| 2| 8| 1
+72|Evaluasi dan laporan kinerja|OT.04| 2| 8| 1
+73|Kerjasama Dalam Negeri:|KS.00| 2| 9| 1
+74|Kerjasama Luar Negeri (Bilateral Regional Multilateral) :|KS.01| 2| 9| 1
+75|Hubungan Antar Lembaga|HM.00| 2| 10| 1
+76|Siaran pers/pres release|HM.01| 2| 10| 1
+77|Kunjungan wartawan/liputan|HM.02| 2| 10| 1
+78|Kunjungan dinas|HM.03| 2| 10| 1
+79|Hearing  dengar pendapat DPR|HM.04| 2| 10| 1
+80|Penerbitan Publikasi dan Dokumentasi|HM.05| 2| 10| 1
+81|Guntingan Berita/ Kliping koran/Logo foto/ Karikatur|HM.06| 2| 10| 1
+82|Pameran/ Sayembara/Festival/pembuatan spanduk/iklan |HM.07| 2| 10| 1
+83|Brosur/Kalender Publikasi|HM.08| 2| 10| 1
+84|Pekan Swadesi|HM.09| 2| 10| 1
+85|Siaran melalui radio/ koran/TV/dll|HM.10| 2| 10| 1
+86|Majalah ilmiah|HM.11| 2| 10| 1
+87|Permintaan sambutan/ penyangga/pembicara/membuka acara/sebagai pelindung|HM.12| 2| 10| 1
+88|Usulan perencanaan unit kerja beserta data pendukung |PR.00| 2| 11| 1
+89|RPJM  Bidang pendidikan/ pokok- pokok kebijakan dan strategi pembangunan bidang pendidikan|PR.01| 2| 11| 1
+90|Program kerja tahunan|PR.02| 2| 11| 1
+91|Laporan akuntabilitas kinerja instansi pemerintah|PR.03| 2| 11| 1
+92|Evaluasi program |PR.04| 2| 11| 1
+93|Laporan|PR.05| 2| 11| 1
+94|Rencana Kebutuhan barang|LK.00| 2| 12| 1
+95|Berkas penawaran|LK.01| 2| 12| 1
+96|Pengadaan barang|LK.02| 2| 12| 1
+97|Pekerjaan konstruksi|LK.03| 2| 12| 1
+98|Jasa konsultasi|LK.04| 2| 12| 1
+99|Kartu barang/ kartu gudang|LK.05| 2| 12| 1
+100|Penyaluran distribusi  berkas penyaluran/ distribusi barang diantaranya : Surat permintaan barang dari unit kerja/ formulir permintaan persetujuan sampai dengan surat perintah mengeluarkan barang S|LK.06| 2| 12| 1
+101|Inventaris barang|LK.07| 2| 12| 1
+102|Perbaikan/pemeliharaan|LK.08| 2| 12| 1
+103|Penghapusan barang|LK.09| 2| 12| 1
+104|Bukti - bukti kepemilikan aset|LK.10| 2| 12| 1
+105|Inventaris barang|LK.11| 2| 12| 1
+106|Persuratan|TU.00| 2| 13| 1
+107|Kearsipan|TU.01| 2| 13| 1
+108|Administrasi penggunaan fasilitas kantor meliputi berkas tentang permintaan dan penggunaaan ruang gedung kendaraan dan fasilitas kantor lainnya|RT.00| 2| 14| 1
+109|Pengamanan/security/SKK (Satuan Keamanan Kampus)|RT.01| 2| 14| 1
+110|Berkas pelaksanaan pengamanan kantor/gedung/rumah dinas dan pejabat|RT.02| 2| 14| 1
+111|Penunjang Kerumahtanggaan|RT.03| 2| 14| 1
+112|Kebersihan dan Taman|RT.04| 2| 14| 1
+113|Konsumsi dan akomodasi|RT.05| 2| 14| 1
+114|Perjalanan Dinas|RT.06| 2| 14| 1
+115|Pengurusan VISA/PASPORT/Exit Permit/SBKRI/SITAS/KITAS|RT.07| 2| 14| 1
+116|Penerima Tamu|RT.08| 2| 14| 1
+117|Acara Kedinasan|RT.09| 2| 14| 1
+118|Perencanaan sistem informasi dan komunikasi|TI.00| 2| 15| 1
+119|Pengumpulan dan pengolahan data|TI.01| 2| 15| 1
+120|Data base|TI.02| 2| 15| 1
+121|Design sistem informasi dan komunikasi|TI.03| 2| 15| 1
+122|Administrasi keanggotaan/Langganan/jaringan|TI.04| 2| 15| 1
+123|Evaluasi sistem dan media|TI.05| 2| 15| 1
+124|Rencana/program diklat|DL.00| 2| 16| 1
+125|Penyelenggaran diklat (berkas penyelenggaran diklat mulai dari penentuan peserta diklat daftar peserta diklat, daftar hadir, daftar pengajar, penilaian, dll)|DL.01| 2| 16| 1
+126|Laporan dan evaluasi diklat|DL.02| 2| 16| 1
+127|Buku register peserta/alumni|DL.03| 2| 16| 1
+128|Buku nomer ijazah (STTPL)|DL.04| 2| 16| 1
+129|Administrasi pengiriman pesera diklat|DL.05| 2| 16| 1
+130|Administrasi pengiriman pendidikan formal|DL.06| 2| 16| 1
+131|Seminar/Lokakarya/Temu karya/Workshop|DL.07| 2| 16| 1
+132|Perencanaan|WS.00| 2| 17| 1
+133|Administrasi pengawasan meliputi: surat penugasan surat pemberitahuan, dll|WS.01| 2| 17| 1
+134|Laporan|WS.02| 2| 17| 1
+135|Laporan tindak lanjut|WS.03| 2| 17| 1
+136|Administrasi layanan pengawasan external|WS.04| 2| 17| 1
+137|Penanganan kasus|WS.05| 2| 17| 1
+138|Pembangunan atau perbaikan Jamban/ saluran pembuangan|LL.00| 2| 18| 1
+139|Lelayu/ Kematian/uang duka|LL.01| 2| 18| 1
+140|Lahan Parkir|LL.02| 2| 18| 1
+141|Kenang kenangan|LL.03| 2| 18| 1
+142|vandel|LL.04| 2| 18| 1
+143|Kantin/ toko|LL.05| 2| 18| 1
+144|Penawaran/ perkenalan|LL.06| 2| 18| 1
+145|Langganan buku-buku|LL.07| 2| 18| 1
+146|Pesanan buku-buku|LL.08| 2| 18| 1
+147|Pemilu|LL.09| 2| 18| 1
+148|Kiriman buku/ majalah/ album/foto/koran/video/CD/dll|LL.10| 2| 18| 1
+149|Zakat/infaq/qurban/amal jariyah/|LL.11| 2| 18| 1
+150|Penyusunan RAPBN|KU.00| 2| 19| 1
+151|Penyampaian RAPBN Kepada DPR|KU.01| 2| 19| 1
+152|Penyusunan Anggaran Pendapatan Belanja Negara|KU.02| 2| 19| 1
+153|Anggaran Pembangunan|KU.03| 2| 19| 1
+154|Anggaran Belanja|KU.04| 2| 19| 1
+155|Bantuan /Penjaman Luar Negeri |KU.05| 2| 19| 1
+156|Pengelola APBN/Dana Pinjaman/Hibah Luar Negeri (PHLN)|KU.06| 2| 19| 1
+157|Pertanggungjawaban Keuangan Negara|KU.07| 2| 19| 1
+158|Sistem akuntasi keuangan ITS|KU.08| 2| 19| 1
+159|Sumbangan Pembinaan Pendidikan SPP|KU.09 | 0| 0| 1
+160|Formasi Pegawai|KP.00| 2| 20| 1
+161|Pengadaan Pegawai|KP.01| 2| 20| 1
+162|Pengangkatan CPNS|KP.02| 2| 20| 1
+163|Pengangkatan pegawai Honorer|KP.03| 2| 20| 1
+164|Pembinaan karir pegawai|KP.04| 2| 20| 1
+165|Mutasi pegawai|KP.05| 2| 20| 1
+166|Cuti|KP.06| 2| 20| 1
+167|Kesejahteraan pegawai|KP.07| 2| 20| 1
+168|Administrasi kepegawaian|KP.08| 2| 20| 1
+169|Pemberhentian pegawai|KP.09| 2| 20| 1
+170|Perselisihan/sengketa kepegawaian|KP.10| 2| 20| 1
+171|Berkas perorangan pegawai negeri sipil|KP.11| 2| 20| 1
+172|Organisasi  non kedinasan|KP.12| 2| 20| 1
+173|Daya Tampung Mahasiswa|PP.00.00| 3| 21| 1
+174|Administrasi dan Seleksi Mahasiswa|PP.00.01| 3| 21| 1
+175|Naskah soal|PP.00.02| 3| 21| 1
+176|Penetapan mahasiswa yang diterima|PP.00.03| 3| 21| 1
+177|Orientasi mahasiswa baru|PP.00.04| 3| 21| 1
+178|Berkas Pendaftaran|PP.00.05| 3| 21| 1
+179|Data mahasiswa yang diterima|PP.00.06| 3| 21| 1
+180|Registrasi Administrasi|PP.01.00| 3| 22| 1
+181|Registrasi Akademik|PP.01.01| 3| 22| 1
+182|Daftar registrasi Mahasiswa baru|PP.01.02| 3| 22| 1
+183|Daftar Registrasi Mahasiswa Reguler dan Non Reguler|PP.01.03| 3| 22| 1
+184|Kalender Akademik termasuk didalamnya:|PP.01.04| 3| 22| 1
+185|Jadwal Perkuliahan|PP.02.00| 3| 23| 1
+186|Daftar Kehadiran|PP.02.01| 3| 23| 1
+187|Daftar Mahasiswa Peserta Mata Kuliah|PP.02.02| 3| 23| 1
+188|Administrasi Pelaksanaan kurikulum|PP.03.00| 3| 24| 1
+189|Bahan Ajar/ media pembelaran, Meliputi:|PP.03.01| 3| 24| 1
+190|Evaluasi dan pengembangan Kurikulum|PP.03.02| 3| 24| 1
+191|Jenjang Pendidikan|PP.03.03| 3| 24| 1
+192|Administrasi Penyelenggaraan Program Studi|PP.04.00| 3| 25| 1
+193|Evaluasi pelaksanaan program Studi baru|PP.04.01| 3| 25| 1
+194|Ujian Tengah Semester|PP.05.00| 3| 26| 1
+195|Ujian Akhir Semester|PP.05.01| 3| 26| 1
+196|Tugas Akhir  Skripsi, Thesis, Desertasi, Komprehensif, KKL, PPL|PP.05.02| 3| 26| 1
+197|Administrasi Kelulusan|PP.06.00| 3| 27| 1
+198|Penetapan Kelulusan|PP.06.01| 3| 27| 1
+199|Ijazah dan Transkip|PP.06.02| 3| 27| 1
+200|Wisuda|PP.06.03| 3| 27| 1
+201|Pengajaran|PP.07.00| 3| 28| 1
+202|Evaluasi Mahasiswa Terhadap Dosen|PP.07.01| 3| 28| 1
+203|Perbimbingan dan Pengujian Mahasiswa|PP.07.02| 3| 28| 1
+204|Peningkatan Mutu|PP.07.03| 3| 28| 1
+205|Perpustakaan|PP.08.00| 3| 29| 1
+206|Laboratorium|PP.08.01| 3| 29| 1
+207|Arsip Perguruan Tinggi|PP.08.02| 3| 29| 1
+208|Aula / Gedung Teater|PP.08.03| 3| 29| 1
+209|Registrasi Alumni|PP.09.00| 3| 30| 1
+210|Organisasi Alumni|PP.09.01| 3| 30| 1
+211|Program Kegiatan Alumni|PP.09.02| 3| 30| 1
+212|Penelusuran Alumni|PP.09.03| 3| 30| 1
+213|Laporan Perkembangan Alumni |PP.09.04| 3| 30| 1
+214|Cuti Mahasiswa|KM.00.00| 3| 31| 1
+215|Putus Kuliah/Pengunduran Diri|KM.00.01| 3| 31| 1
+216|Droup Out (DO)|KM.00.02| 3| 31| 1
+217|Mutasi|KM.00.03| 3| 31| 1
+218|Laporan Status Mahasiswa|KM.00.04| 3| 31| 1
+219|Mahasiswa kena sanksi akademik|KM.00.05| 3| 31| 1
+220|Beasiswa|KM.02.00| 3| 32| 1
+221|Keringanan Biaya Pendidikan|KM.02.01| 3| 32| 1
+222|Administrasi Fasilitas Mahasiswa Lainnya Asrama, Kesehatan, Asuransi, Transportasi|KM.02.02| 3| 32| 1
+223|Administrasi organisasi mahasiswa BEM, MENWA, OLAHRAGA, SENI, AGAMA, PRAMUKA, BEMFA, UKMJ, HMJ, DMF|KM.03.00| 3| 33| 1
+224|Proses Pembentukan pengurus|KM.03.01| 3| 33| 1
+225|Pengangkatan Pengurus|KM.03.02| 3| 33| 1
+226|Laporan  pelaksanaan kegiatan|KM.03.03| 3| 33| 1
+227|Proposal Usulan sampai dengan laporan kegiatan mahasiswa yang diterima|KM.05.00| 3| 36| 1
+228|Proposal Usulan  kegiatan mahasiswa yang ditolak|KM.05.01| 3| 36| 1
+229|PIMNAS|KM.06.00| 3| 37| 1
+230|Lomba Karya Tulis Mahasiswa (LKTM)|KM.06.01| 3| 37| 1
+231|Program Kreativitas Mahasiswa (PKM)|KM.06.02| 3| 37| 1
+232|Administrasi Pendaftaran dan seleksi|KM.08.00| 3| 39| 1
+233|Penetapan|KM.08.01| 3| 39| 1
+234|Kartu Induk Mahasiswa|KM.10.00| 3| 41| 1
+235|Kartu Mahasiswa|KM.10.01| 3| 41| 1
+236|Kartu Peserta Kuliah|KM.10.02| 3| 41| 1
+237|Kartu Tanda Anggota Perpustakaan|KM.10.03| 3| 41| 1
+238|Kartu Rencana Studi (KRS)|KM.10.04| 3| 41| 1
+239|Kartu Hasil Studi (KHS)|KM.10.05| 3| 41| 1
+240|Kartu Daftar Ulang|KM.10.06| 3| 41| 1
+241|Kartu Tanda Registrasi adm.mahasiswa (KTRM)|KM.10.07| 3| 41| 1
+242|Surat Keterangan Ijin/Tugas Belajar|KM.10.08| 3| 41| 1
+243|Proposal Penelitian|PN.01.00| 3| 43| 1
+244|Laporan hasil penelitian|PN.02.00| 3| 44| 1
+245|Dokumentasi hasil penelitian|PN.02.01| 3| 44| 1
+246|Universitas/Institut/Sekolah Tinggi Negeri|PN.08.00| 3| 50| 1
+247|Universitas/Institut/Akademik|PN.08.01| 3| 50| 1
+248|Departement/Lembaga non departement|PN.08.02| 3| 50| 1
+249|Pemerintah Daerah|PN.08.03| 3| 50| 1
+250|Luar Negeri|PN.08.04| 3| 50| 1
+251|Administrasi Penyelenggaraan Kegiatan KKN|PM.02.00| 3| 53| 1
+252|Piagam/Sertifikat KKN|PM.02.01| 3| 53| 1
+253|Administrasi praktek kerja di masyarakat|PM.04.00| 3| 55| 1
+254|Evaluasi praktek kerja di masyarakat|PM.04.01| 3| 55| 1
+255|Universitas/Institut/Sekolah Tinggi/Akademi Negeri|PM.05.00| 3| 56| 1
+256|Universitas/Institut/Sekolah Tinggi/Akademi Swasta|PM.05.01| 3| 56| 1
+257|Departement/Lembaga non departement|PM.05.02| 3| 56| 1
+258|Pemerintah Daerah|PM.05.03| 3| 56| 1
+259|Luar Negeri|PM.05.04| 3| 56| 1
+260|Komisi Guru Besar|DT.02.00| 3| 58| 1
+261|Data Kepakaran|AK.00.00| 3| 63| 1
+262|Data Lulusan Mahasiswa|AK.00.01| 3| 63| 1
+263|Data Mahasiswa Asing dan Program Darma|AK.00.02| 3| 63| 1
+264| Data Pertukaran Mahasiswa|AK.00.03| 3| 63| 1
+265|Data Prestasi Mahasiswa|AK.01.00| 3| 64| 1
+266|Data Inventori Mahasiswa|AK.01.01| 3| 64| 1
+267|Data Nilai Akhir/Transkip|AK.01.02| 3| 64| 1
+268|Data Mahasiswa Asing |AK.01.03| 3| 64| 1
+269|Profil Lembaga|AK.03.00| 3| 66| 1
+270|Publikasi Dan Informasi Akademik|AK.03.01| 3| 66| 1
+271|Buku Pedoman Akademik|AK.03.02| 3| 66| 1
+272|EPSBED (Evaluasi Program Studi Berdasarkan Evaluasi Diri)|AK.03.03| 3| 66| 1
+273|Buku Wisuda|AK.03.04| 3| 66| 1
+274|Buku Dies Natalis|AK.03.05| 3| 66| 1
+275|Pidato Pengukuhan Guru Besar|AK.03.06| 3| 66| 1
+276|Orasi Ilmiah|AK.03.07| 3| 66| 1
+277|Peraturan rektor /Koordinator Kopertis|HK.00.00| 3| 67| 1
+278|Keputusan Rektor/Koordinator Kopertis|HK.00.01| 3| 67| 1
+279|Keputusan Pejabat Lainnya|HK.00.02| 3| 67| 1
+280|Instruksi Rektor/Koordinator Kopertis|HK.00.03| 3| 67| 1
+281|Instrumen Hukum|HK.00.04| 3| 67| 1
+282|Dokumentasi Hukum (produk hukum ekstern)|HK.00.05| 3| 67| 1
+283|Sosialisasi atau Penyuluhan Hukum|HK.00.06| 3| 67| 1
+284|Bantuan dan konsultasi hukum|HK.00.07| 3| 67| 1
+285|00|HK.00.08| 3| 67| 1
+286|Perizinan|HK.00.09| 3| 67| 1
+287|Laporan Berkala|OT.04.00| 3| 72| 1
+288|Laporan Insidentil|OT.04.01| 3| 72| 1
+289|Kerjasama dengan Lembaga Pemerintah|KS.00.00| 3| 73| 1
+290|Kerjasama dengan Swasta|KS.00.01| 3| 73| 1
+291|Kerjasama antar Perguruan Tinggi|KS.00.02| 3| 73| 1
+292|Kerjasama dengan Perusahaan|KS.00.03| 3| 73| 1
+293|Kerjasama antar Pemerintah|KS.01.00| 3| 74| 1
+294|Kerjasama dengan Badan Internasional|KS.01.01| 3| 74| 1
+295|Kerjasama dengan Lembaga Non Pemerintah|KS.01.02| 3| 74| 1
+296|Kerjasama antar Perguruan Tinggi|KS.01.03| 3| 74| 1
+297|Kerjasama dengan Sekolah Asing di Indonesia|KS.01.04| 3| 74| 1
+298|Kerjasama dengan Sekolah Indonesia di luar negeri|KS.01.05| 3| 74| 1
+299|Pertukaran pelajar/mahasiswa|KS.01.06| 3| 74| 1
+300|Hubungan Antar Lembaga Pemerintah|HM.00.00| 3| 75| 1
+301|Hubungan dengan Swasta/LSM|HM.00.01| 3| 75| 1
+302|Hubungan Antar Perusahaan|HM.00.02| 3| 75| 1
+303|Hubungan dengan Perguruan Tinggi|HM.00.03| 3| 75| 1
+304|Hubungan dengan Media massa|HM.00.04| 3| 75| 1
+305|Dalam Negeri|HM.03.00| 3| 78| 1
+306|Luar Negeri|HM.03.01| 3| 78| 1
+307|Program kerja tahunan unit kerja|PR.02.00| 3| 90| 1
+308|Program kerja PTN dan kopertis|PR.02.01| 3| 90| 1
+309|Lakip unit kerja|PR.03.00| 3| 91| 1
+310|Lakip PTN dan kopertis|PR.03.01| 3| 91| 1
+311|Evaluasi masing2 unit kerja|PR.04.00| 3| 92| 1
+312|Evaluasi tingkat PTN dan kopertis|PR.04.01| 3| 92| 1
+313|Laporan berkala |PR.05.00| 3| 93| 1
+314|Laporan insidentil|PR.05.01| 3| 93| 1
+315|Usulan unit kerja|LK.00.00| 3| 94| 1
+316|Rencana kebutuhan PTN dan kopertis|LK.00.01| 3| 94| 1
+317|Pengadaan barang dengan cara pelelangan|LK.02.00| 3| 96| 1
+318|Pengadaan barang dengan penunjukkan langsung|LK.02.01| 3| 96| 1
+319|Pengadaan barang dengan cara pengadaan langsung|LK.02.02| 3| 96| 1
+320|Pengadaan barang dengan kontes/Sayembara|LK.02.03| 3| 96| 1
+321|Pengadaan barang melalui pinjaman|LK.02.04| 3| 96| 1
+322|Pengadaan barang melalui sewa|LK.02.05| 3| 96| 1
+323|Pengadaan barang melalui bantuan/ hibah|LK.02.06| 3| 96| 1
+324|Pengadaan barang melalui tukar- menukar|LK.02.07| 3| 96| 1
+325|Pekerjaan konstruksi melalui pelelangan|LK.03.00| 3| 97| 1
+326|Pekerjaan konstruksi melalui pemilihan langsung|LK.03.01| 3| 97| 1
+327|Pekerjaan konstruksi melalui penunjukkan langsung|LK.03.02| 3| 97| 1
+328|Pekerjaan konstruksi melalui pengadaan  langsung|LK.03.03| 3| 97| 1
+329|Jasa konsultasi melalui seleksi|LK.04.00| 3| 98| 1
+330|Jasa konsultasi melalui penunjukkan langsung|LK.04.01| 3| 98| 1
+331|Jasa konsultasi melalui pengadaan langsung|LK.04.02| 3| 98| 1
+332|Jasa konsultasi melalui sayembara|LK.04.03| 3| 98| 1
+333|Daftar Opname Fisik Barang Inventaris (DOFBI)|LK.07.00| 3| 101| 1
+334|Daftar inventaris ruangan (DIR)|LK.07.01| 3| 101| 1
+335|Daftar inventaris Barang (DIB)|LK.07.02| 3| 101| 1
+336|Kartu inventaris barang |LK.07.03| 3| 101| 1
+337|Pemeliharaan barang bergerak/ inventaris kantor|LK.08.00| 3| 102| 1
+338|Perbaikan/ pemeliharaan barang inventasi |LK.08.01| 3| 102| 1
+339|Penghapusan barang bergerak/ barang inventaris kantor, diantaranya berkas usulan penghapusan,panitia penghapusan s.d. berita acara penghapusan barang|LK.09.00| 3| 103| 1
+340|Penghapusan barang investasi, diantaranya berkas nota usulan penghapusan, panitia penghapusan s.d. berita acara penghapusan barang|LK.09.01| 3| 103| 1
+341|Sertifikat tanah |LK.10.00| 3| 104| 1
+342|IMB|LK.10.01| 3| 104| 1
+343|BPKB|LK.10.02| 3| 104| 1
+344|STNK|LK.10.03| 3| 104| 1
+345|Denah/ gambar bangunan/ instalasi listrik air dan gas|LK.10.04| 3| 104| 1
+346|Daftar barang inventaris|LK.11.00| 3| 105| 1
+347|Kode barang inventaris|LK.11.01| 3| 105| 1
+348|sistem informasi pendataan barang inventaris/ Simak BMN |LK.11.02| 3| 105| 1
+349|Jenis- jenis barang inventaris|LK.11.03| 3| 105| 1
+350|Surat tugas/ perintah beserta lampirannya|TU.00.00| 3| 106| 1
+351|Surat undangan/ surat panggilan|TU.00.01| 3| 106| 1
+352|Pengumuman|TU.00.02| 3| 106| 1
+353|Risalah/ notulen rapat|TU.00.03| 3| 106| 1
+354|Daftar nama/ alamat kantor|TU.00.04| 3| 106| 1
+355|Daftra nama/ alamat pejabat|TU.00.05| 3| 106| 1
+356|Ucapan terima kasih/ selamat/mohon diri/ mohon maaf|TU.00.06| 3| 106| 1
+357|Surat kuasa|TU.00.07| 3| 106| 1
+358|Surat keterangan/ Rekomendasi/ pemberitahuan|TU.00.08| 3| 106| 1
+359|Sura pengantar|TU.00.09| 3| 106| 1
+360|Pedoman surat|TU.00.10| 3| 106| 1
+361|Surat teguran |TU.00.11| 3| 106| 1
+362|Surat faximile|TU.00.12| 3| 106| 1
+363|Administrasi Pengendalian Surat|TU.01.00| 3| 107| 1
+364|Permintaan Penggandaan Dokumen/Arsip|TU.01.01| 3| 107| 1
+365|Pembina Kearsipan|TU.01.02| 3| 107| 1
+366|Penyimpanan dan Pemeliharaan Arsip|TU.01.03| 3| 107| 1
+367|Peminjaman dan Penggunaan arsip|TU.01.04| 3| 107| 1
+368|Penyusutan Arsip|TU.01.05| 3| 107| 1
+369|Berkas Proses alih media arsip|TU.01.06| 3| 107| 1
+370|Telepon/Telex/Fax|RT.03.00| 3| 111| 1
+371|Internet|RT.03.01| 3| 111| 1
+372|Listrik|RT.03.02| 3| 111| 1
+373|Air|RT.03.03| 3| 111| 1
+374|Kendaraan Dinas Bus, Mobil, Sepeda Motor|RT.03.04| 3| 111| 1
+375|Mesin Diesel|RT.03.05| 3| 111| 1
+376|Bengkel|RT.03.06| 3| 111| 1
+377|Perencanaan Perjalanan dinas|RT.06.00| 3| 114| 1
+378|Permintaan Perjalanan Dinas|RT.06.01| 3| 114| 1
+379|Surat Tugas|RT.06.02| 3| 114| 1
+380|Surat Perintah Perjalanan dinas  (SPPD)|RT.06.03| 3| 114| 1
+381|Tamu Biasa|RT.08.00| 3| 116| 1
+382|Tamu VIP/VVIP  Presiden, DPR, Menteri Dan Pejabat Tinggi Lainnya|RT.08.01| 3| 116| 1
+383|Tamu asing|RT.08.02| 3| 116| 1
+384|Buku Tamu|RT.08.03| 3| 116| 1
+385|Upacara Hari Nasional / Peringatan|RT.09.00| 3| 117| 1
+386|Upacara Pelantikan|RT.09.01| 3| 117| 1
+387|Upacara Pemberian Penghargaan|RT.09.02| 3| 117| 1
+388|Upacara Pengambilan Sumpah/Janji|RT.09.03| 3| 117| 1
+389|Upacara Penandatanganan Dokumen|RT.09.04| 3| 117| 1
+390|Upacara Bendera|RT.09.05| 3| 117| 1
+391|Penerimaan Tamu / kunjungan Tamu|RT.09.06| 3| 117| 1
+392|Rapat/Sidang/Rakernas/Rakerwas|RT.09.07| 3| 117| 1
+393|Rapat Dinas/Rapat……..|RT.09.08| 3| 117| 1
+394|Rapat Kerja Institut / RAPIM|RT.09.09| 3| 117| 1
+395|Notulen Rapat / Risalah|RT.09.10| 3| 117| 1
+396|Dies Natalis / Lustrum|RT.09.11| 3| 117| 1
+397|Hari Libur/Gerakan Bulan……|RT.09.12| 3| 117| 1
+398|Jamuan Makan|RT.09.13| 3| 117| 1
+399|Rencana kebutuhan |DL.00.00| 3| 124| 1
+400|Kurikulum diklat|DL.00.01| 3| 124| 1
+401|Modul/materi/bahan diklat|DL.00.02| 3| 124| 1
+402|Jadwal/ silabus|DL.00.03| 3| 124| 1
+403|Diklat dalam negeri|DL.05.00| 3| 129| 1
+404|Diklat Luar negeri|DL.05.01| 3| 129| 1
+405|Pendidikan dalam negeri|DL.06.00| 3| 130| 1
+406|Pendidikan luar negeri|DL.06.01| 3| 130| 1
+407|Penyelenggaran seminar|DL.07.00| 3| 131| 1
+408|Pengiriman peserta mengikuti seminar|DL.07.01| 3| 131| 1
+409|Program kerja pemeriksaan tahunan|WS.00.00| 3| 132| 1
+410|Program pembinaan/fasilitasi aparat pengawasan pendidikan didaeah|WS.00.01| 3| 132| 1
+411|Program konsultasi dan koordinasi pengawasan regional|WS.00.02| 3| 132| 1
+412|Program pemantauan hasil pengawasan dan pemeriksaan|WS.00.03| 3| 132| 1
+413|Program AKIP unit kerja dilingkungan PTN dan kopertis|WS.00.04| 3| 132| 1
+414|Laporan  hasil pmeriksaan BPK |WS.02.00| 3| 134| 1
+415|Laporan hasil pemeriksaan BPKP|WS.02.01| 3| 134| 1
+416|Laporan hasil pemeriksaan ITJEN|WS.02.02| 3| 134| 1
+417|Laporan pengaduan masyarakat|WS.02.03| 3| 134| 1
+418|Laporan hasil pengawasan dan pemeriksaan Tematik|WS.02.04| 3| 134| 1
+419|Laporan pembinaan/ fasilitasi aparat pengawasan pendidikan|WS.02.05| 3| 134| 1
+420|Laporan forum konsultasi dan koordinasi pengawasan|WS.02.06| 3| 134| 1
+421|Laporan pemutakhiran data / rekonsiliasi|WS.02.07| 3| 134| 1
+422|Berkas tentang pengaduan, keluhan, ketidakpuasan, masyarakat kepada PTN dan Kopertis|WS.05.00| 3| 137| 1
+423|Pidana berkas tentang penyelesaian kasus/ sengketa pidana baik kejahatan maupun pelanggaran meliputi :|WS.05.01| 3| 137| 1
+424|Perdata berkas penyelesaian kasus/ sengketa perdata meliputi :|WS.05.02| 3| 137| 1
+425|Berkas tentang penyelesaian kasus atau sengketa tata usaha negara meliputi :|WS.05.03| 3| 137| 1
+426|Analisis kebutuhan pegawai|KP.00.00| 3| 160| 1
+427|Analisis jabatan|KP.00.01| 3| 160| 1
+428|Kualifikasi pendidikan|KP.00.02| 3| 160| 1
+429|Usulan formasi|KP.00.03| 3| 160| 1
+430|Usulan formasi dari unit kerja|KP.00.04| 3| 160| 1
+431|Usulan Permintaan formasi kepada MENPAN dan kepala BKN|KP.00.05| 3| 160| 1
+432|persetujuan MENPAN |KP.00.06| 3| 160| 1
+433|Pengumuman|KP.01.00| 3| 161| 1
+434|Seleksi Administrasi|KP.01.01| 3| 161| 1
+435|Pemanggilan Peserta Tes|KP.01.02| 3| 161| 1
+436|Pelaksanaan ujian Tulis|KP.01.03| 3| 161| 1
+437|Keputusan hasil ujian|KP.01.04| 3| 161| 1
+438|Tes wawancara|KP.01.05| 3| 161| 1
+439|Penetapan pengumuman kelulusan tahap akhir|KP.01.06| 3| 161| 1
+440|Berkas lamaran yang tidak diterima|KP.01.07| 3| 161| 1
+441|Lamaran pekerjaan|KP.01.08| 3| 161| 1
+442|Usulan pengangkatan CPNS|KP.02.00| 3| 162| 1
+443|Berkas usulan CPNS|KP.02.01| 3| 162| 1
+444|SK CPNS kolektif|KP.02.02| 3| 162| 1
+445|SK CPNS perorangan|KP.02.03| 3| 162| 1
+446|Pengangkatan pegawai baru|KP.03.00| 3| 163| 1
+447|Diklat/Kursus/Tugas belajar/Ujian dinas/Penataran/pelatihan/Magang/Pelatihan pra jabatan|KP.04.00| 3| 164| 1
+448|daftar penilaian pelaksanaan pekerjaan (DP3)|KP.04.01| 3| 164| 1
+449|Penghargaan dan tanda jasa|KP.04.02| 3| 164| 1
+450|Penyesuaian ijazah|KP.04.03| 3| 164| 1
+451|Peninjauan Masa kerja|KP.04.04| 3| 164| 1
+452|Penetapan Angka kredit|KP.04.05| 3| 164| 1
+453|Kenaikan pangkat|KP.04.06| 3| 164| 1
+454|Sumpah/janji jabatan|KP.04.08| 3| 164| 1
+455|Pegawai teladan|KP.04.09| 3| 164| 1
+456|Daftar prestasi|KP.04.10| 3| 164| 1
+457|Disiplin pegawai|KP.04.11| 3| 164| 1
+458|Alih status, pindah instansi, pindah wilayah kota, diperbantukan, dipekerjakan, penugasan sementara, mutasi antar unit|KP.05.00| 3| 165| 1
+459|Mutasi keluarga|KP.05.01| 3| 165| 1
+460|Usul kenaikan Pangkat/golongan/jabatan|KP.05.02| 3| 165| 1
+461|Cuti Besar|KP.06.00| 3| 166| 1
+462|Cuti sakit, cuti bersalin, cuti tahunan|KP.06.01| 3| 166| 1
+463|Cuti alasan penting|KP.06.02| 3| 166| 1
+464|Cuti diluar tanggungan negara|KP.06.03| 3| 166| 1
+465|Layanan pemeliharaan kesehatan pegawai|KP.07.00| 3| 167| 1
+466|Layanan asuransi pegawai|KP.07.01| 3| 167| 1
+467|Layanan tabungan perumahan|KP.07.02| 3| 167| 1
+468|Layanan bantuan sosial|KP.07.03| 3| 167| 1
+469|Layanan koperasi|KP.07.04| 3| 167| 1
+470|Layanan TASPEN|KP.07.05| 3| 167| 1
+471|Layanan olahraga dan rekreasi|KP.07.06| 3| 167| 1
+472|Layanan seragam/ pakaian dinas|KP.07.07| 3| 167| 1
+473|Kartu pegawai|KP.08.00| 3| 168| 1
+474|Keanggotaan organisasi profesi|KP.08.01| 3| 168| 1
+475|Laporan pajak penghasilan pribadi|KP.08.02| 3| 168| 1
+476|Kartu induk pegawai|KP.08.03| 3| 168| 1
+477|Data pegawai|KP.08.04| 3| 168| 1
+478|Keterangan penerimaan pembayaran penghasilan pegawai|KP.08.05| 3| 168| 1
+479|Pensiun|KP.09.00| 3| 169| 1
+480|Pemberhentian dengan hormat|KP.09.01| 3| 169| 1
+481|Pemberhentian dengan tidak hormat|KP.09.02| 3| 169| 1
+482|Lamaran|KP.11.00| 3| 171| 1
+483|Nota persetujuan|KP.11.01| 3| 171| 1
+484|SK pengangkatan CPNS|KP.11.02| 3| 171| 1
+485|Hasil pengujian kesehatan|KP.11.03| 3| 171| 1
+486|SK pengangkatan PNS|KP.11.04| 3| 171| 1
+487|SK peninjauan masa kerja|KP.11.05| 3| 171| 1
+488|SK kenaikan pangkat|KP.11.06| 3| 171| 1
+489|SPMT (Surat pernyataan Melaksanakan Tugas)|KP.11.07| 3| 171| 1
+490|Sk mpengangkatan/ pemberhentian jabatan|KP.11.08| 3| 171| 1
+491|SK mutasi|KP.11.09| 3| 171| 1
+492|SK perpindahan antar instansi|KP.11.10| 3| 171| 1
+493|SK cuti diluar tanggungan negara|KP.11.11| 3| 171| 1
+494|SK hukuman jabatan|KP.11.12| 3| 171| 1
+495|SK perbantuan/ dipekerjakan|KP.11.13| 3| 171| 1|2015-07-29 02:33:27.000||);
+496|SK penarikan kembali perbantuan/ dipekerjakan|KP.11.14| 3| 171| 1
+497|SK pemberian uang tunggu|KP.11.15| 3| 171| 1
+498|SK pengalihan PNS|KP.11.16| 3| 171| 1
+499|SK pemberhentian sebagai PNS|KP.11.17| 3| 171| 1
+500|SK pemberhentian sementara|KP.11.18| 3| 171| 1
+501|Surat keterangan pernyataan hilang|KP.11.19| 3| 171| 1
+502|SK pengangkatan/ pemberhentian sebagai pejabat negara|KP.11.20| 3| 171| 1
+503|SK pembebasan dari jabatan pejabat negara|KP.11.21| 3| 171| 1
+504|SK penggantian nama|KP.11.22| 3| 171| 1
+505|Surat perbaikan tanggal, tahun kelahiran SK pensiun|KP.11.23| 3| 171| 1
+506|Berita acara pengambilan sumpah/ janji PNS dan jabatan|KP.11.24| 3| 171| 1
+507|Surat ijin menjadi anggota parpol/ormas/LSM|KP.11.25| 3| 171| 1
+508|Surat pencabutan ijin menjadi anggota parpol|KP.11.26| 3| 171| 1
+509|Akta nikah/ cerai|KP.11.27| 3| 171| 1|2015-07-29 02:33:27.000 ||)|
+510|Akta kelahiran|KP.11.28| 3| 171| 1
+511|SK meninggal dunia|KP.11.29| 3| 171| 1
+512|Surat ketengan mutasi keluarga|KP.11.30| 3| 171| 1
+513|Surat keterangan peningkatan pendidikan|KP.11.31| 3| 171| 1
+514|Penetapan angka kredit|KP.11.32| 3| 171| 1
+515|Jabatan fungsional |KP.11.33| 3| 171| 1
+516|Surat keterngan hasil penelitian khusus |KP.11.34| 3| 171| 1
+517|Surat pemberitahuan kenaikan gaji berkala|KP.11.35| 3| 171| 1
+518|Surat tugas ijin belajar dalam negeri / luar negeri|KP.11.36| 3| 171| 1
+519|Surat ijin bepergian keluar negeri|KP.11.37| 3| 171| 1
+520|Ijazah/sertifikat|KP.11.38| 3| 171| 1
+521|SK penarikan pegawai|KP.11.39| 3| 171| 1
+522|Surat pertimbangan status PNS|KP.11.40| 3| 171| 1
+523|Surat pengaktifan kembali sebagai PNS|KP.11.41| 3| 171| 1
+524|Surat pernyataan pengunduran diri karena dicalonkan menjadi kepala/wakil kepala daerah|KP.11.42| 3| 171| 1
+525|Sk pensiun|KP.11.43| 3| 171| 1
+526|KORPRI|KP.12.00| 3| 172| 1
+527|Dharma wanita|KP.12.01| 3| 172| 1
+528|Rancangan anggaran kerja unit kerja|KU.00.00| 3| 150| 1
+529|Usulan anggaran kegiatan|KU.00.01| 3| 150| 1
+530|Rancangan anggaran ITS|KU.00.02| 3| 150| 1
+531|Pembahasan RAPBN oleh Komisi DPR|KU.01.00| 3| 151| 1
+532|Nota jawaban DPR|KU.01.01| 3| 151| 1
+533|Petunjuk penyusunan dan pembahasan anggaran belanja rutin|KU.02.00| 3| 152| 1
+534|Bahan penyusunan DUK |KU.02.01| 3| 152| 1
+535|Daftar Usulan Kegiatan (DUK) dan Daftar Rencana Kegiatan DRK)|KU.02.02| 3| 152| 1
+536|Hasil ulangan ringkas belanja rutin menurut organisasinya, ulangan ringkas belanja rutin menurut program, ulangan ringkas pendapatan rutin, rincian belanja rutin kegiatan dan jenis pengeluaran per uni|KU.02.03| 3| 152| 1
+537|Konsep DIK/DRK (Daftar Isian Kegiatan/Daftar Rincian Kegiatan)|KU.02.04| 3| 152| 1
+538|DIK/DRK (Daftar Isian Kegiatan/Daftar Rincian Kegiatan) dari Petunjuk Operasional (PO) termasuk revisinya|KU.02.05| 3| 152| 1
+539|Ketentuan/peraturan yang menyangkut perencanaan, pelaksanaan, penatausahaan dan pertanggungjawaban anggaran rutin.|KU.02.06| 3| 152| 1
+540|Pagu Indikatif|KU.02.07| 3| 152| 1
+541|Daftar Isian Pelaksanaan Anggaran (DIPA)|KU.02.08| 3| 152| 1
+542|Petunjuk penyusunan dan pembahasan anggaran pembangunan|KU.03.00| 3| 153| 1
+543|Bahan penyusunan Daftar Usulan Proyek (DUP)|KU.03.01| 3| 153| 1
+544|Daftar Usulan Proyek (DUP)/ Daftar Rencana Proyek Pembangunan (DRPP) dan Lembar Kerja (LK)|KU.03.02| 3| 153| 1
+545|Hasil bahasan penyusunan Rencana Anggaran Belanja Pembangunan dan data pendukungnya dan memorandum penilaian DUP|KU.03.03| 3| 153| 1
+546|Petunjuk pembahasan konsep Daftar Isian Proyek (DIP) dan Lembar Kerja (LK)|KU.03.04| 3| 153| 1
+547|Hasil ulangan rancangan ulangan ringkas sektor, sub sektor, dan program, perincian menurut proyek, dan memori penjelasan anggaran pembangunan, dan memorandum hasil bahasan/penilaian konsep DIP.|KU.03.05| 3| 153| 1
+548|Bukti rekening koran pemerintah |KU.03.06| 3| 153| 1
+549|Jurnal penerimaan|KU.03.07| 3| 153| 1
+550|Buku besar/buku besar pembantu|KU.03.08| 3| 153| 1
+551|Surat Perintah  Pembayaran (SPP) dan lampirannya -  SPP-GU|KU.04.00| 3| 154| 1
+552|Perhitungan Anggaran|KU.04.01| 3| 154| 1
+553|Pembukuan Anggaran yaitu :|KU.04.02| 3| 154| 1
+554|Konsep Perhitungan Anggaran (PA)|KU.04.03| 3| 154| 1
+555|Obyek Pemeriksaan Lembaga Fungsional (OBERIK)|KU.04.04| 3| 154| 1
+556|Nota perhitungan anggaran negara |KU.04.05| 3| 154| 1
+557|Dokumen uang muka dan data pendukung (Penagihan, kwitansi pembayaran, Faktur pajak, bukti penerimaan kas/ bank, berita acara penyelesaian pekerjaan/serah terima barang)|KU.04.06| 3| 154| 1
+558|Nota pembukuan anggaran (SP3)|KU.04.07| 3| 154| 1
+559|Nota verifikasi|KU.04.08| 3| 154| 1
+560|Belanja modal|KU.04.09| 3| 154| 1
+561|Penggunaan dana pemerintah RI untuk kontribusi/iuran dan lain-lain pada badan/organisasi internasional|KU.04.10| 3| 154| 1
+562|Persetujuan penggunaan/pencairan anggaran|KU.04.11| 3| 154| 1
+563|Daftar Gaji/Kartu Gaji|KU.04.12| 3| 154| 1
+564|Surat keterangan untuk mendapatkan tunjangan keluarga (KP4)|KU.04.13| 3| 154| 1
+565|Laporan Keuangan (Financial Statement), antara lain :|KU.04.14| 3| 154| 1
+566|Laporan tahunan/laporan nihil|KU.04.15| 3| 154| 1
+567|Belanja bagi hasil/bantuan |KU.04.16| 3| 154| 1
+568|Anggaran listrik, air, telepon, internet|KU.04.17| 3| 154| 1
+569|Uang lembur |KU.04.18| 3| 154| 1
+570|Biaya perjalan dinas (SPPD)|KU.04.19| 3| 154| 1
+571|Tunjangan jabatan|KU.04.20| 3| 154| 1
+572|Permohonan Pinjamam Luar Negeri (Blue book) |KU.05.00| 3| 156| 1
+573|Dokumen kesanggupan negara donor untuk membiayai  (grey book)|KU.05.01| 3| 156| 1
+574|Dokumen Memorandum of Understanding  (MoU), dan dokumen sejenisnya|KU.05.02| 3| 156| 1
+575|Dokumen Loan Agreement (PHLN), seperti : draft agreement, legal opinion, surat menyurat dengan tender, dan sebagainya.|KU.05.03| 3| 156| 1
+576|Alokasi dan relokasi penggunaan dana luar negeri antara lain usulan luncuran dana |KU.05.04| 3| 156| 1
+577|Aplikasi penarikan dana BLN, berikut lampirannya|KU.05.05| 3| 156| 1
+578|Organisasi penarikan dana (payment advice)|KU.05.06| 3| 156| 1
+579|Realisasi pencairan dana bantuan luar negeri, yaitu SPM beserta lampirannya antara lain : SPP, Kontrak, BA dan data pendukung lainnya.|KU.05.07| 3| 156| 1
+580|Replenishment (permintaan penarikan dana dari negara donor) meliputi antara lain Nomor Objection (COP), Project Implementation, Notification, of Contract Widrawal  Authorization (WA), statement of  Ex|KU.05.08| 3| 156| 1
+581|Report /laporan yang terdiri dari|KU.05.09| 3| 156| 1
+582|Staff appraisal  report|KU.05.10| 3| 156| 1
+583|Completion report/annual report|KU.05.11| 3| 156| 1
+584|Ketentuan/peraturan yang menyangkut bantuan/pinjaman luar negeri|KU.05.12| 3| 156| 1
+585|Keputusan Menteri tentang penetapan|KU.06.00| 3| 157| 1
+586|Hasil pengawasan dan pemeriksaan|KU.07.00| 3| 158| 1
+587|Persetujuan Dewan Perwakilan Rakyat tentang Perhitungan anggaran negara, risalah rapat dan lain-lain|KU.07.01| 3| 158| 1
+588|Nota perhitungan anggaran negara |KU.07.02| 3| 158| 1
+589|Laporan aparat pemeriksa fungsional |KU.07.03| 3| 158| 1
+590|Dokumen penyelesaian keuangan negara|KU.07.04| 3| 158| 1
+591|SPM belanja pegawai, belanja barang, belanja pemeliharaan dan perjalanan dinas beserta lampirannya.|KU.07.05| 3| 158| 1
+592|Neraca|KU.07.06| 3| 158| 1
+593|Manual implementasi sistem akuntasi ITS|KU.08.00| 3| 159| 1
+594|Berita acara rekonsiliasi|KU.08.01| 3| 159| 1
+595|Daftar transaksi, pengeluaran, penerimaan, dokumen sumber, bukti jurnal, surat tanda setor, surat setor bukan pajak, surat perintah pencairan dana, SPM|KU.08.02| 3| 159| 1
+596|Laporan realisasi bulanan sistem akuntasi ITS|KU.08.03| 3| 159| 1
+597|Laporan realisaasi lanjutan sistem akuntasi ITS|KU.08.04| 3| 159| 1
+598|Calon mahasiswa|PP.00.01.0| 4| 174| 1
+599|Tes Masuk|PP.00.01.0| 4| 174| 1
+600|Hasil Penelitian Tes Mahasiswa Baru|PP.00.01.0| 4| 174| 1
+601|Pengumuman penerimaan mahasiswa baru termasuk daftar mahasiswa yang diterima|PP.00.01.0| 4| 174| 1
+602|Sertifikat/ Piagam/ Surat keterangan|PP.00.04.0| 4| 177| 1
+603|Administrasi Penyelenggaraan|PP.00.04.0| 4| 177| 1
+604|Laporan Orientasi|PP.00.04.0| 4| 177| 1
+605|Yang diterima|PP.00.05.0| 4| 178| 1
+606|Yang Tidak diterima|PP.00.05.0| 4| 178| 1
+607|Bukti Pembayaran Pendidikan|PP.01.00.0| 4| 0| 1
+608|Daftar Ulang Mahasiswa Lama|PP.01.01.0| 4| 181| 1
+609|KRS|PP.01.01.0| 4| 181| 1
+610|KHS|PP.01.01.0| 4| 181| 1
+611|IRS|PP.01.01.0| 4| 181| 1
+612|FRS|PP.01.01.0| 4| 181| 1
+613|KRS|PP.01.02.0| 4| 182| 1
+614|KHS|PP.01.02.0| 4| 182| 1
+615|IRS|PP.01.02.0| 4| 182| 1
+616|FRS|PP.01.02.0| 4| 182| 1
+617|KRS|PP.01.03.0| 4| 183| 1
+618|KHS|PP.01.03.0| 4| 183| 1
+619|IRS|PP.01.03.0| 4| 183| 1
+620|FRS|PP.01.03.0| 4| 183| 1
+621|Administrasi Penyusunan Kalender Akademik|PP.01.04.0| 4| 184| 1
+622|Penetapan Kalender Akademik|PP.01.04.0| 4| 184| 1
+623|Administrasi Penyusunan/Jadwal/ Perkuliahan|PP.02.00.0| 4| 185| 1
+624|Jadwal Kuliah Semester (Gasal, Genap)|PP.02.00.0| 4| 185| 1
+625|Mahasiswa|PP.02.01.0| 4| 186| 1
+626|Dosen|PP.02.01.0| 4| 186| 1
+627|Laporan Kehadiran|PP.02.01.0| 4| 186| 1
+628|Pelayanan Data Kehadiran|PP.02.01.0| 4| 186| 1
+629|Sajian MataKuliah (MPK, MKK, MKB, MBB)|PP.03.00.0| 4| 188| 1
+630|Silabus|PP.03.00.0| 4| 188| 1
+631|GBPP|PP.03.00.0| 4| 188| 1
+632|SAP|PP.03.00.0| 4| 188| 1
+633|Penyusunan Bahan Ajar/ Bahan penunjang pendidikan|PP.03.01.0| 4| 189| 1
+634|Teknik pembuatan alat peraga dan model pembelajaran|PP.03.01.0| 4| 189| 1
+635|Pengembangan Proses belajar mengajar|PP.03.01.0| 4| 189| 1
+636|Penetapan Kurikulum|PP.03.02.0| 4| 190| 1
+637|Persetujuan usulan sampai dengan penetapan pembukaan program studi baru|PP.04.00.0| 4| 192| 1
+638|Penolakan usulan pembukaan program studi baru|PP.04.00.0| 4| 192| 1
+639|Administrasi Ujian Tengah Semester|PP.05.00.0| 4| 194| 1
+640|Nilai hasil ujian tengah semester|PP.05.00.0| 4| 194| 1
+641|Administrasi Ujian Akhir Semester|PP.05.01.0| 4| 195| 1
+642|Nilai hasil ujian akhir semester|PP.05.01.0| 4| 195| 1
+643|Administrasi Penyusunan/Pelaksanaan Tugas Akhir Mahasiswa|PP.05.02.0| 4| 196| 1
+644|Nilai Tugas Akhir|PP.05.02.0| 4| 196| 1
+645|Berkas pengusulan pengadaan blanko|PP.06.02.0| 4| 199| 1
+646|Duplikat Ijazah dan Transkip|PP.06.02.0| 4| 199| 1
+647|Surat keterangan pengganti ijazah dan transkip|PP.06.02.0| 4| 199| 1
+648|Buku induk nomor registrasi lulusan|PP.06.02.0| 4| 199| 1
+649|Daftar hadir mengajar|PP.07.00.0| 4| 201| 1
+650|Ekivalensi Wajib Mengajar Penuh (EWMP)|PP.07.00.0| 4| 201| 1
+651|Laporan Realisasi Pengajaran|PP.07.00.0| 4| 201| 1
+652|Dosen Pembimbing Akademik|PP.07.02.0| 4| 203| 1
+653|Dosen Pembimbing Tugas Akhir|PP.07.02.0| 4| 203| 1
+654|Dosen Penguji Ujian semester|PP.07.02.0| 4| 203| 1
+655|Dosen Penguji Tugas akhir|PP.07.02.0| 4| 203| 1
+656|Dosen Pendamping Asistensi|PP.07.02.0| 4| 203| 1
+657|Seminar/Lokakarya dalam negeri|PP.07.03.0| 4| 204| 1
+658|Seminar/Lokakarya luar negeri|PP.07.03.0| 4| 204| 1
+659|Tugas belajar di dalam negeri|PP.07.03.0| 4| 204| 1
+660|Tugas belajar di luar negeri|PP.07.03.0| 4| 204| 1
+661|Latihan /Training/Kursus/Magang|PP.07.03.0| 4| 204| 1
+662|Ceramah|PP.07.03.0| 4| 204| 1
+663|Sisposium/Workshop|PP.07.03.0| 4| 204| 1
+664|Konsorsium|PP.07.03.0| 4| 204| 1
+665|Diskusi|PP.07.03.0| 4| 204| 1
+666|Konperensi/Konggres|PP.07.03.0| 4| 204| 1
+667|Beasiswa studi lanjut|PP.07.03.1| 4| 204| 1
+668|Administrasi pelaksanaan |PP.08.00.0| 4| 205| 1
+669|Ketentuan pemakaian|PP.08.00.0| 4| 205| 1
+670|Pengadaan buku|PP.08.00.0| 4| 205| 1
+671|Daftar Koleksi|PP.08.00.0| 4| 205| 1
+672|Kartu anggota|PP.08.00.0| 4| 205| 1
+673|Katalog|PP.08.00.0| 4| 205| 1
+674|Peminjaman |PP.08.00.0| 4| 205| 1
+675|Penghapusan buku/ bahan pustaka|PP.08.00.0| 4| 205| 1
+676|Administrasi pelaksanaan |PP.08.01.0| 4| 206| 1
+677|Ketentuan Pemakaian|PP.08.01.0| 4| 206| 1
+678|Administrasi pelaksanaan |PP.08.02.0| 4| 207| 1
+679|Ketentuan Pemakaian|PP.08.02.0| 4| 207| 1
+680|Administrasi pelaksanaan |PP.08.03.0| 4| 208| 1
+681|Ketentuan Pemakaian|PP.08.03.0| 4| 208| 1
+682|Ketentuan Beasiswa|KM.02.00.0| 4| 220| 1
+683|Tawaran Beasiswa|KM.02.00.0| 4| 220| 1
+684|Daftar calon penerima beasiswa|KM.02.00.0| 4| 220| 1
+685|Seleksi calon penerima beasiswa|KM.02.00.0| 4| 220| 1
+686|Penetapan penerima beasiswa|KM.02.00.0| 4| 220| 1
+687|Perpanjangan Beasiswa|KM.02.00.0| 4| 220| 1
+688|Ketentuan keringanan biaya pendidikan|KM.02.01.0| 4| 221| 1
+689|Seleksi keringanan biaya pendidikan|KM.02.01.0| 4| 221| 1
+690|Penetapan penerima keringanan biaya spp|KM.02.01.0| 4| 221| 1
+691|Proposal yang disetujui (Tim/satgas penelitian, Program penelitian, surat Ijin penelitian)|PN.01.00.0| 4| 243| 1
+692|Proposal ditolak|PN.01.00.0| 4| 243| 1
+693|Proses Pengangkatan Komisi Guru Besar|DT.02.00.0| 4| 260| 1
+694|Pengangkatan/Pemberhentian Keanggotaan|DT.02.00.0| 4| 260| 1
+695|Laporan Bulanan|OT.04.00.0| 4| 287| 1
+696|Laporan Triwulan|OT.04.00.0| 4| 287| 1
+697|Laporan Semesteran|OT.04.00.0| 4| 287| 1
+698|Laporan Tahunan Unit Kerja|OT.04.00.0| 4| 287| 1
+699|Laporan Tahunan PTN dan Kopertis|OT.04.00.0| 4| 287| 1
+700|Pengadaan barang bergerak, mulai dari lelang, pengumuman pemenang, daftar rekanan sampai dengan berita acara serah terima barang|LK.02.00.0| 4| 317| 1
+701|Pengadaan barang investasi, mulai dari lelang, pengumuman pemenang, daftar rekanan sampai dengan berita acara serah terima barang |LK.02.00.0| 4| 317| 1
+702|Sosialisasi/Penyuluhan Kearsipan|TU.01.02.0| 4| 352| 1
+703|Bimbingan Teknis|TU.01.02.0| 4| 352| 1
+704|Monitoring|TU.01.02.0| 4| 352| 1
+705|Daftar Pertelaan Arsip|TU.01.03.0| 4| 364| 1
+706|Pemeliharaan arsip, Seperti kegiatan pembersihan, fumigasi, dll|TU.01.03.0| 4| 364| 1
+707|Pemindahan arsip inaktif, Berita acara pemindahan, Daftar Pertelaan Arsip yang dipindahkan.|TU.01.05.0| 4| 368| 1
+708|Pemusnahan arsip, Berita acara pemusnahan, Daftar arsip yang dimusnahkan, Rekomendasi/pertimbangan/persetujuan pemusnahan arsip dari instansi terkait, Keputusan Pemusnahan|TU.01.05.0| 4| 368| 1
+709|Penyerahan arsip, Berita Acara serah Terima arsip, Daftar Pertelaan arsip yang dimusnahkan|TU.01.05.0| 4| 368| 1
+710|Proses verbal mulai dari penyelidikan, penyidikan sampai dengan vonis|WS.05.01.0| 4| 423| 1
+711|Berkas pembelaan dan bantuan hukum|WS.05.01.0| 4| 423| 1
+712|Telaahan hukum dan opini hukum|WS.05.01.0| 4| 423| 1
+713|Proses verbal mulai dari penyelidikan, penyidikan sampai dengan vonis|WS.05.02.0| 4| 424| 1
+714|Berkas pembelaan dan bantuan hukum|WS.05.02.0| 4| 424| 1
+715|Telaahan hukum dan opini hukum|WS.05.02.0| 4| 424| 1
+716|Proses verbal mulai dari penyelidikan, penyidikan sampai dengan vonis|WS.05.03.0| 4| 425| 1
+717|Berkas pembelaan dan bantuan hukum|WS.05.03.0| 4| 425| 1
+718|Telaahan hukum dan opini hukum|WS.05.03.0| 4| 425| 1
+719|Surat tugas/surat ijin/SK|KP.04.00.0| 4| 447| 1
+720|Administrasi|KP.04.00.0| 4| 447| 1
+721|Sertifikat/Piagam|KP.04.00.0| 4| 447| 1
+722|Daftar hadir|KP.04.11.0| 4| 457| 1
+723|Rekapitulasi  daftar hadir|KP.04.11.0| 4| 457| 1
+724|Berkas pelanggaran disiplin|KP.04.11.0| 4| 457| 1
+725|Usulan |KP.05.00.0| 4| 458| 1
+726|Nota persetjuan|KP.05.00.0| 4| 458| 1
+727|Surat pernikahan|KP.05.01.0| 4| 459| 1
+728|Akta nikah|KP.05.01.0| 4| 459| 1
+729|Akta kelahiran anak|KP.05.01.0| 4| 459| 1
+730|Surat keterangan meninggal dunia|KP.05.01.0| 4| 459| 1
+731|Buku kas umum|KU.04.02.0| 4| 553| 1
+732|Buku Pembantu|KU.04.02.0| 4| 553| 1
+733|Registrasi 10 buku tambahan|KU.04.02.0| 4| 553| 1
+734|DPP (Daftar  Pembukuan Pencairan / Pengeluaran)|KU.04.02.0| 4| 553| 1
+735|DHP (Daftar  Himpunan Pencairan/ Pengeluaran)|KU.04.02.0| 4| 553| 1
+736|Kartu Pegawai  Anggaran / Kredit|KU.04.02.0| 4| 553| 1
+737|Rekening Koran Bank|KU.04.02.0| 4| 553| 1
+738|Rencana Kerja|KU.04.04.0| 4| 555| 1
+739|Rencana Kerja Pengawas|KU.04.04.0| 4| 555| 1
+740|Hasil Pemeriksaan Tahunan|KU.04.04.0| 4| 555| 1
+741|Berita Acara Pemeriksaan Kas / Register Penutupan Kas|KU.04.14.0| 4| 565| 1
+742|Laporan Realisasi Anggaran rutin dan pembangunan|KU.04.14.0| 4| 565| 1
+743|Laporan pendapatan negara yang terdiri dari : penerimaan pajak dan penerimaan bukan pajak (PNPB)|KU.04.14.0| 4| 565| 1
+744|Rainbursement|KU.05.05.0| 4| 577| 1
+745|Direct Payment|KU.05.05.0| 4| 577| 1
+746|Special Commitment|KU.05.05.0| 4| 577| 1
+747|Special Account|KU.05.05.0| 4| 577| 1
+748|Proggress Report|KU.05.09.0| 4| 581| 1
+749|Monthly Report|KU.05.09.0| 4| 581| 1
+750|Quarterly Report|KU.05.09.0| 4| 581| 1
+751|Kepala Kantor / Satuan Kerja|KU.06.00.0| 4| 585| 1
+752|Pimpinan Proyek / Bagian proyek|KU.06.00.0| 4| 585| 1
+753|Bendaharawan rutin dan proyek|KU.06.00.0| 4| 585| 1
+754|Bendaharawan penerima/ bendahara pengeluaran|KU.06.00.0| 4| 585| 1
+755|Kuasa pengguna anggaran|KU.06.00.0| 4| 585| 1
+756|Kuasa pengguna barang dan jasa|KU.06.00.0| 4| 585| 1
+757|pejabat pembuat komitmen|KU.06.00.0| 4| 585| 1
+758|Pejabat pembuat daftar gaji|KU.06.00.0| 4| 585| 1
+759|Pejabat penandatangan SPM|KU.06.00.0| 4| 585| 1
+760|LHP (Laporan Hasil Pemeriksaan )|KU.07.03.0| 4| 589| 1
+761|MHP (Momerandum Hasil Pemeriksaan )|KU.07.03.0| 4| 589| 1
+762|Tindak Lanjut / Tanggapan MHP|KU.07.03.0| 4| 589| 1|2015-07-29 02:33:27.000||);

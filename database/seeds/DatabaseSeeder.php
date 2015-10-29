@@ -14,8 +14,9 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
+        $this->call('UsersTableSeeder');
 		$this->call('DepartmentsTableSeeder');
-    $this->call('PositionsTableSeeder');
+        $this->call('PositionsTableSeeder');
     
 	}
 
@@ -70,17 +71,33 @@ class PositionsTableSeeder extends Seeder {
          //delete users table records
          DB::table('positions')->delete();
          DB::table('positions')->insert(array(
+             array('name'=>'Staff','enabled'=>'1'),
              array('name'=>'Ketua Himpunan','enabled'=>'1'),
              array('name'=>'Wakahima Internal','enabled'=>'1'),
              array('name'=>'Wakahima Eksternal','enabled'=>'1'),
              array('name'=>'Bendahara Umum','enabled'=>'1'),
-             array('name'=>'Sekretaris Umum','enabled'=>'1',),
+             array('name'=>'Sekretaris Umum','enabled'=>'1'),
              array('name'=>'Kepala Departemen','enabled'=>'1'),
              array('name'=>'Sekretaris Departemen','enabled'=>'1'),
              array('name'=>'Kepala Biro','enabled'=>'1'),
              array('name'=>'Staff Ahli','enabled'=>'1'),
-             array('name'=>'Staff Ahli Biro','enabled'=>'1',),
-             array('name'=>'Staff','enabled'=>'1',)
+             array('name'=>'Staff Ahli Biro','enabled'=>'1')
+          ));
+       }
+ 
+}
+
+class UsersTableSeeder extends Seeder {
+ 
+       public function run()
+       {
+         //delete users table records
+         DB::table('users')->delete();
+         DB::table('users')->insert(array(
+             array(   'name'=>'admin' , 'username'=>'admin' , 'password' => bcrypt('secret') , 'deptid' => '0' , 'positionid' => '0'),
+             array(   'name'=>'john' , 'username'=>'wakahima' , 'password' => bcrypt('secret') , 'deptid' => '1' , 'positionid' => '2'),
+             array(   'name'=>'bilfash' , 'username'=>'kadept' , 'password' => bcrypt('secret') , 'deptid' => '7' , 'positionid' => '7'),
+             array(   'name'=>'sabila' , 'username'=>'staff' , 'password' => bcrypt('secret') , 'deptid' => '7' , 'positionid' => '1'),
           ));
        }
  
