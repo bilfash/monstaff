@@ -17,14 +17,14 @@ class UserController extends Controller {
 	 */
 	public function index()
 	{
-		if (Request::isMethod('get')) 
+		if (Request::isMethod('get'))
         {
         	$this->data['items'] = User::get();
             return view('pages.user.index', $this->data);
-        }        
-        elseif (Request::isMethod('post')) 
+        }
+        elseif (Request::isMethod('post'))
         {
-        	
+
         }
 	}
 
@@ -36,21 +36,21 @@ class UserController extends Controller {
 	public function create()
 	{
 
-		if (Request::isMethod('get')) 
+		if (Request::isMethod('get'))
         {
         	$this->data['positions'] = Position::where('enabled',1)->get();
         	$this->data['departments'] = Department::where('enabled',1)->get();
             return view('pages.user.create', $this->data);
-        }        
-        elseif (Request::isMethod('post')) 
+        }
+        elseif (Request::isMethod('post'))
         {
         	$data = Input::all();
         	User::create([
-				'name' => $data['name'],
-				'username' => $data['username'],
-				'password' => bcrypt($data['username']),
-				'deptid' => $data['deptid'],
-				'positionid' => $data['positionid'],
+						'name' => $data['name'],
+						'username' => $data['username'],
+						'password' => bcrypt($data['username']),
+						'deptid' => $data['deptid'],
+						'positionid' => $data['positionid'],
 			]);
             return redirect('user');
         }
@@ -63,7 +63,7 @@ class UserController extends Controller {
 	 */
 	public function store()
 	{
-		
+
 	}
 
 	/**
@@ -78,7 +78,7 @@ class UserController extends Controller {
         $this->data['item'] = User::find($id);
         if($this->data['item'])
             return view('pages.user.detail', $this->data);
-        else 
+        else
             return redirect('user');
 	}
 
@@ -102,17 +102,17 @@ class UserController extends Controller {
 	public function update($id)
 	{
 
-        if (Request::isMethod('get')) 
+        if (Request::isMethod('get'))
         {
             $this->data['positions'] = Position::where('enabled',1)->get();
         	$this->data['departments'] = Department::where('enabled',1)->get();
             $this->data['item'] = User::find($id);
             if($this->data['item'])
                 return view('pages.user.update', $this->data);
-            else 
+            else
                 return redirect('user');
-        }        
-        elseif (Request::isMethod('post')) 
+        }
+        elseif (Request::isMethod('post'))
         {
             $user = User::find($id);
             $user->update(Input::all());

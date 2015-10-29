@@ -1,7 +1,7 @@
 <header class="main-header">
     <a href="{{ url('/') }}" class="logo" style="background-color:#070719;">
         <span class="logo-mini">HMTC</span>
-        <span class="logo-lg">Mon<b>Staff</b> HMTC ITS</span>       
+        <span class="logo-lg">Mon<b>Staff</b> HMTC ITS</span>
     </a>
 
     <nav class="navbar navbar-static-top" role="navigation">
@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                  <span class="hidden-xs">{{ Auth::user()->name}}</span>
+                  <span class="hidden-xs">{{ Auth::user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->

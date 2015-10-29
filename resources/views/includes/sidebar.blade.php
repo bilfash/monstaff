@@ -19,7 +19,7 @@
     ?>
 
     @if($role == 1)
-        
+
         <li class="treeview" >
             <a href="#">
                 <i class="fa fa-folder"></i>
@@ -96,7 +96,53 @@
         <li class="treeview" >
             <a href="#">
                 <i class="fa fa-folder"></i>
-                <span>{{ Question }}</span>
+                <span>Feedback</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="{{ URL::to('feedback') }}">
+                        <i class="fa fa-angle-double-right"></i>
+                        Manage
+                    </a>
+                </li>
+            </ul>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="{{ URL::to('feedback/create') }}">
+                        <i class="fa fa-angle-double-right"></i>
+                        Create
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="treeview" >
+            <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Event</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="{{ URL::to('event') }}">
+                        <i class="fa fa-angle-double-right"></i>
+                        Manage
+                    </a>
+                </li>
+            </ul>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="{{ URL::to('event/create') }}">
+                        <i class="fa fa-angle-double-right"></i>
+                        Create
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="treeview" >
+            <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Question</span>
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
@@ -117,7 +163,7 @@
             </ul>
         </li>
 
-    @else 
+    @else
 
         <li class="treeview" >
             <a href="{{ URL::to('feedback') }}">

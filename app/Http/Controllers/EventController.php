@@ -18,7 +18,8 @@ class EventController extends Controller {
 
 	public function index()
 	{
-
+		$this->data['items'] = Event::get();
+		return view('pages.event.index', $this->data);
 	}
 
 	/**
@@ -36,11 +37,8 @@ class EventController extends Controller {
 				}
 				elseif ($request->isMethod('post'))
 				{
-					$range = $request->range;
-					$tampung = explode(' - ', $range);
-					$request->start=$tampung[0];
-					$request->end=$tampung[1];
-					$variabel = Event::create($request);
+					// TODO
+					$variabel = Event::create($request->all());
 						return redirect('event');
 		}
 	}
@@ -83,9 +81,23 @@ class EventController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request,$id)
 	{
-		//
+		if ($request->isMethod('get'))
+        {
+        	$this->data['items'] = Event::get();
+        	$this->data['lala'] = Event::find($id);
+			if($this->data['lala'])
+				return view('pages.event.update', $this->data);
+			else
+				return redirect('event');
+        }
+        elseif ($request->isMethod('post'))
+        {
+        	$lala = Event::find($id);
+        	$lala->update(Input::all());
+            return redirect('Event/detail/'.$id);
+        }
 	}
 
 	/**
@@ -94,9 +106,13 @@ class EventController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function detail($id)
 	{
-		//
+		$this->data['item'] = Event::find($id);
+		if($this->data['item'])
+			return view('pages.event.detail', $this->data);
+		else
+			return redirect('event');
 	}
 
 }
