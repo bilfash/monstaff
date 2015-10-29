@@ -4,33 +4,27 @@ use App\Http\Controllers\Controller;
 use Input;
 use Auth;
 use Request;
+use App\User;
 use App\Position;
+use App\Department;
 
-class PositionController extends Controller {
+class UserController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-
-	public function check__(){
-		if(Auth::id() != 1) {
-			return redirect('/');
-		}
-	}
-
 	public function index()
 	{
 		//wajib
-		
 		$this->data['role'] = 1;
 		//--wajib
 
 		if (Request::isMethod('get')) 
         {
-        	$this->data['items'] = Position::get();
-            return view('pages.position.index', $this->data);
+        	$this->data['items'] = User::get();
+            return view('pages.user.index', $this->data);
         }        
         elseif (Request::isMethod('post')) 
         {
@@ -52,13 +46,21 @@ class PositionController extends Controller {
 
 		if (Request::isMethod('get')) 
         {
-        	$this->data['items'] = Position::get();
-            return view('pages.position.create', $this->data);
+        	$this->data['positions'] = Position::where('enabled',1)->get();
+        	$this->data['departments'] = Department::where('enabled',1)->get();
+            return view('pages.user.create', $this->data);
         }        
         elseif (Request::isMethod('post')) 
         {
-        	$position = Position::create(Input::all());
-            return redirect('position');
+        	$data = Input::all();
+        	User::create([
+				'name' => $data['name'],
+				'username' => $data['username'],
+				'password' => bcrypt($data['username']),
+				'deptid' => $data['deptid'],
+				'positionid' => $data['positionid'],
+			]);
+            return redirect('user');
         }
 	}
 
@@ -69,7 +71,7 @@ class PositionController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		
 	}
 
 	/**
@@ -81,15 +83,14 @@ class PositionController extends Controller {
 	public function detail($id)
 	{
 		//wajib
-        
         $this->data['role'] = 1;
         //--wajib
 
-        $this->data['item'] = Position::find($id);
+        $this->data['item'] = User::find($id);
         if($this->data['item'])
-            return view('pages.position.detail', $this->data);
+            return view('pages.user.detail', $this->data);
         else 
-            return redirect('position');
+            return redirect('user');
 	}
 
 	/**
@@ -117,18 +118,19 @@ class PositionController extends Controller {
 
         if (Request::isMethod('get')) 
         {
-            $this->data['items'] = Position::get();
-            $this->data['lala'] = Position::find($id);
-            if($this->data['lala'])
-                return view('pages.position.update', $this->data);
+            $this->data['positions'] = Position::where('enabled',1)->get();
+        	$this->data['departments'] = Department::where('enabled',1)->get();
+            $this->data['item'] = User::find($id);
+            if($this->data['item'])
+                return view('pages.user.update', $this->data);
             else 
-                return redirect('position');
+                return redirect('user');
         }        
         elseif (Request::isMethod('post')) 
         {
-            $position = Position::find($id);
-            $position->update(Input::all());
-            return redirect('position/detail/'.$id);
+            $user = User::find($id);
+            $user->update(Input::all());
+            return redirect('user/detail/'.$id);
         }
 	}
 
@@ -141,14 +143,12 @@ class PositionController extends Controller {
 	public function delete($id)
 	{
 		//wajib
-		
 		$this->data['role'] = 1;
 		//--wajib
 
-		$department = Position::find($id);
-		$department->enabled = 0;
+		$department = User::find($id);
 		$department->delete();
-		return redirect('position');
+		return redirect('user');
 	}
 
 }

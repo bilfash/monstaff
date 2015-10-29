@@ -23,7 +23,7 @@ class DepartmentController extends Controller {
 	public function index()
 	{
 		//wajib
-		$this->check__();
+		
 		$this->data['role'] = 1;
 		//--wajib
 
@@ -46,7 +46,7 @@ class DepartmentController extends Controller {
 	public function create()
 	{
 		//wajib
-		$this->check__();
+		
 		$this->data['role'] = 1;
 		//--wajib
 
@@ -70,7 +70,7 @@ class DepartmentController extends Controller {
 	public function detail($id)
 	{
 		//wajib
-		$this->check__();
+		
 		$this->data['role'] = 1;
 		//--wajib
 
@@ -112,7 +112,7 @@ class DepartmentController extends Controller {
 	public function update($id)
 	{
 		//wajib
-		$this->check__();
+		
 		$this->data['role'] = 1;
 		//--wajib
 
@@ -142,7 +142,7 @@ class DepartmentController extends Controller {
 	public function delete($id)
 	{
 		//wajib
-		$this->check__();
+		
 		$this->data['role'] = 1;
 		//--wajib
 

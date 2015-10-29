@@ -17,16 +17,10 @@ class AdminController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function check__(){
-		if(Auth::id() != 1) {
-			return redirect('/');
-		}
-	}
 
 	public function index()
 	{
 		//wajib
-		$this->check__();
 		$this->data['role'] = 1;
 		//--wajib
 
@@ -46,7 +40,6 @@ class AdminController extends Controller {
 	public function create()
 	{
 		//wajib
-		$this->check__();
 		$this->data['role'] = 1;
 		//--wajib
 	}

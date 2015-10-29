@@ -29,6 +29,13 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $softDelete = true;
     protected $dates = ['deleted_at'];
 
+    public function isAdmin()
+    {
+        if($this->id != 1){
+            return redirect('/');
+        }
+    }
+
     public function score()
     {
     	return $this->hasMany('App\Score', 'userid', 'id');
