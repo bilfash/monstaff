@@ -33,8 +33,6 @@ Route::group(['middleware' => 'auth','before' => 'admin'], function () {
 	
 	// dashboard
 	Route::get('admin', 'AdminController@index');
-	Route::get('nondept', 'NonDeptController@index');
-	Route::get('dept', 'DeptController@index');
 
 	// department
 	Route::get('department','DepartmentController@index');
@@ -62,10 +60,11 @@ Route::group(['middleware' => 'auth','before' => 'admin'], function () {
 	Route::post('user/create', array('before' =>'csrf', 'uses' => 'UserController@create'));
 	Route::get('user/update/{id}','UserController@update');
 	Route::post('user/update/{id}', array('before' =>'csrf', 'uses' => 'UserController@update'));
-	
-}
 
+});
 
+Route::get('nondept', 'NonDeptController@index');
+Route::get('dept', 'DeptController@index');
 Route::get('event','EventController@index');
 Route::get('event/detail/{id}','EventController@detail');
 Route::get('event/delete/{id}','EventController@delete');
