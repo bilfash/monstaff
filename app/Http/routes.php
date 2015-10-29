@@ -33,3 +33,12 @@ Route::get('department/create','DepartmentController@create');
 Route::post('department/create', array('before' =>'csrf', 'uses' => 'DepartmentController@create'));
 Route::get('department/update/{id}','DepartmentController@update');
 Route::post('department/update/{id}', array('before' =>'csrf', 'uses' => 'DepartmentController@update'));
+
+// position
+Route::get('position','PositionController@index');
+Route::get('position/detail/{id}','PositionController@detail');
+Route::get('position/delete/{id}','PositionController@delete');
+Route::get('position/create','PositionController@create');
+Route::post('position/create', array('before' =>'csrf', 'uses' => 'PositionController@create'));
+Route::get('position/update/{id}','PositionController@update');
+Route::post('position/update/{id}', array('before' =>'csrf', 'uses' => 'PositionController@update'));
