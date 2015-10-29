@@ -96,6 +96,7 @@
         <li class="treeview" >
             <a href="#">
                 <i class="fa fa-folder"></i>
+<<<<<<< HEAD
                 <span>Feedback</span>
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
@@ -142,6 +143,8 @@
         <li class="treeview" >
             <a href="#">
                 <i class="fa fa-folder"></i>
+=======
+>>>>>>> a28719ec7438830e25213e3033c21b7dfa20f50e
                 <span>Question</span>
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
