@@ -42,3 +42,11 @@ Route::get('position/create','PositionController@create');
 Route::post('position/create', array('before' =>'csrf', 'uses' => 'PositionController@create'));
 Route::get('position/update/{id}','PositionController@update');
 Route::post('position/update/{id}', array('before' =>'csrf', 'uses' => 'PositionController@update'));
+
+Route::get('event','EventController@index');
+Route::get('event/detail/{id}','EventController@detail');
+Route::get('event/delete/{id}','EventController@delete');
+Route::get('event/create','EventController@create');
+Route::post('event/create', array('before' =>'csrf', 'uses' => 'EventController@create'));
+Route::get('event/update/{id}','EventController@update');
+Route::post('event/update/{id}', array('before' =>'csrf', 'uses' => 'EventController@update'));

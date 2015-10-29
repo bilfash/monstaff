@@ -15,15 +15,15 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 
         $this->call('UsersTableSeeder');
-		$this->call('DepartmentsTableSeeder');
+				$this->call('DepartmentsTableSeeder');
         $this->call('PositionsTableSeeder');
-    
+
 	}
 
 }
 
 /*class DepartmentsTableSeeder extends Seeder {
- 
+
        public function run()
        {
          //delete users table records
@@ -39,16 +39,17 @@ class DatabaseSeeder extends Seeder {
 
           ));
        }
- 
+
 }*/
 
 class DepartmentsTableSeeder extends Seeder {
- 
+
        public function run()
        {
          //delete users table records
          DB::table('departments')->delete();
          DB::table('departments')->insert(array(
+             array('id'=>0,'name'=>'Admin','enabled'=>'1'),
              array('name'=>'Non Departemen','enabled'=>'1'),
              array('name'=>'Kaderisasi dan Pemetaan','enabled'=>'1'),
              array('name'=>'Dalam Negeri','enabled'=>'1'),
@@ -61,16 +62,17 @@ class DepartmentsTableSeeder extends Seeder {
              array('name'=>'Kesejahteraan Mahasiswa','enabled'=>'1',)
           ));
        }
- 
+
 }
 
 class PositionsTableSeeder extends Seeder {
- 
+
        public function run()
        {
          //delete users table records
          DB::table('positions')->delete();
          DB::table('positions')->insert(array(
+             array('id'=>0,'name'=>'Admin','enabled'=>'1'),
              array('name'=>'Staff','enabled'=>'1'),
              array('name'=>'Ketua Himpunan','enabled'=>'1'),
              array('name'=>'Wakahima Internal','enabled'=>'1'),
@@ -84,11 +86,11 @@ class PositionsTableSeeder extends Seeder {
              array('name'=>'Staff Ahli Biro','enabled'=>'1')
           ));
        }
- 
+
 }
 
 class UsersTableSeeder extends Seeder {
- 
+
        public function run()
        {
          //delete users table records
@@ -100,5 +102,5 @@ class UsersTableSeeder extends Seeder {
              array(   'name'=>'sabila' , 'username'=>'staff' , 'password' => bcrypt('secret') , 'deptid' => '7' , 'positionid' => '1'),
           ));
        }
- 
+
 }
