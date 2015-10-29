@@ -8,6 +8,16 @@
         </li>
     @endif
 
+    <?php
+        if(Auth::id() == 1){
+            $role = 1;
+        } else if(Auth::user()->department->name == 'Non Departemen'){
+            $role = 2;
+        } else {
+            $role = 3;
+        }
+    ?>
+
     @if($role == 1)
         
         <li class="treeview" >

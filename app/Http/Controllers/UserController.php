@@ -17,10 +17,6 @@ class UserController extends Controller {
 	 */
 	public function index()
 	{
-		//wajib
-		$this->data['role'] = 1;
-		//--wajib
-
 		if (Request::isMethod('get')) 
         {
         	$this->data['items'] = User::get();
@@ -39,10 +35,6 @@ class UserController extends Controller {
 	 */
 	public function create()
 	{
-		//wajib
-		
-		$this->data['role'] = 1;
-		//--wajib
 
 		if (Request::isMethod('get')) 
         {
@@ -82,9 +74,6 @@ class UserController extends Controller {
 	 */
 	public function detail($id)
 	{
-		//wajib
-        $this->data['role'] = 1;
-        //--wajib
 
         $this->data['item'] = User::find($id);
         if($this->data['item'])
@@ -112,9 +101,6 @@ class UserController extends Controller {
 	 */
 	public function update($id)
 	{
-		//wajib
-        $this->data['role'] = 1;
-        //--wajib
 
         if (Request::isMethod('get')) 
         {
@@ -142,9 +128,6 @@ class UserController extends Controller {
 	 */
 	public function delete($id)
 	{
-		//wajib
-		$this->data['role'] = 1;
-		//--wajib
 
 		$department = User::find($id);
 		$department->delete();

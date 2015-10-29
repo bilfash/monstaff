@@ -14,18 +14,8 @@ class DepartmentController extends Controller {
 	 * @return Response
 	 */
 
-	public function check__(){
-		if(Auth::id() != 1) {
-			return redirect('/');
-		}
-	}
-
 	public function index()
 	{
-		//wajib
-		
-		$this->data['role'] = 1;
-		//--wajib
 
 		if (Request::isMethod('get')) 
         {
@@ -45,10 +35,6 @@ class DepartmentController extends Controller {
 	 */
 	public function create()
 	{
-		//wajib
-		
-		$this->data['role'] = 1;
-		//--wajib
 
 		if (Request::isMethod('get')) 
         {
@@ -69,10 +55,6 @@ class DepartmentController extends Controller {
 	 */
 	public function detail($id)
 	{
-		//wajib
-		
-		$this->data['role'] = 1;
-		//--wajib
 
 		$this->data['item'] = Department::find($id);
 		if($this->data['item'])
@@ -111,10 +93,6 @@ class DepartmentController extends Controller {
 	 */
 	public function update($id)
 	{
-		//wajib
-		
-		$this->data['role'] = 1;
-		//--wajib
 
 		if (Request::isMethod('get')) 
         {
@@ -141,10 +119,6 @@ class DepartmentController extends Controller {
 	 */
 	public function delete($id)
 	{
-		//wajib
-		
-		$this->data['role'] = 1;
-		//--wajib
 
 		$department = Department::find($id);
 		$department->enabled = 0;
