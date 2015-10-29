@@ -28,37 +28,43 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-// dashboard
-Route::get('admin', 'AdminController@index');
-Route::get('nondept', 'NonDeptController@index');
-Route::get('dept', 'DeptController@index');
+//Admin Controller
+Route::group(['middleware' => 'auth','before' => 'admin'], function () {
+	
+	// dashboard
+	Route::get('admin', 'AdminController@index');
+	Route::get('nondept', 'NonDeptController@index');
+	Route::get('dept', 'DeptController@index');
 
-// department
-Route::get('department','DepartmentController@index');
-Route::get('department/detail/{id}','DepartmentController@detail');
-Route::get('department/delete/{id}','DepartmentController@delete');
-Route::get('department/create','DepartmentController@create');
-Route::post('department/create', array('before' =>'csrf', 'uses' => 'DepartmentController@create'));
-Route::get('department/update/{id}','DepartmentController@update');
-Route::post('department/update/{id}', array('before' =>'csrf', 'uses' => 'DepartmentController@update'));
+	// department
+	Route::get('department','DepartmentController@index');
+	Route::get('department/detail/{id}','DepartmentController@detail');
+	Route::get('department/delete/{id}','DepartmentController@delete');
+	Route::get('department/create','DepartmentController@create');
+	Route::post('department/create', array('before' =>'csrf', 'uses' => 'DepartmentController@create'));
+	Route::get('department/update/{id}','DepartmentController@update');
+	Route::post('department/update/{id}', array('before' =>'csrf', 'uses' => 'DepartmentController@update'));
 
-// position
-Route::get('position','PositionController@index');
-Route::get('position/detail/{id}','PositionController@detail');
-Route::get('position/delete/{id}','PositionController@delete');
-Route::get('position/create','PositionController@create');
-Route::post('position/create', array('before' =>'csrf', 'uses' => 'PositionController@create'));
-Route::get('position/update/{id}','PositionController@update');
-Route::post('position/update/{id}', array('before' =>'csrf', 'uses' => 'PositionController@update'));
+	// position
+	Route::get('position','PositionController@index');
+	Route::get('position/detail/{id}','PositionController@detail');
+	Route::get('position/delete/{id}','PositionController@delete');
+	Route::get('position/create','PositionController@create');
+	Route::post('position/create', array('before' =>'csrf', 'uses' => 'PositionController@create'));
+	Route::get('position/update/{id}','PositionController@update');
+	Route::post('position/update/{id}', array('before' =>'csrf', 'uses' => 'PositionController@update'));
 
-// user
-Route::get('user','UserController@index');
-Route::get('user/detail/{id}','UserController@detail');
-Route::get('user/delete/{id}','UserController@delete');
-Route::get('user/create','UserController@create');
-Route::post('user/create', array('before' =>'csrf', 'uses' => 'UserController@create'));
-Route::get('user/update/{id}','UserController@update');
-Route::post('user/update/{id}', array('before' =>'csrf', 'uses' => 'UserController@update'));
+	// user
+	Route::get('user','UserController@index');
+	Route::get('user/detail/{id}','UserController@detail');
+	Route::get('user/delete/{id}','UserController@delete');
+	Route::get('user/create','UserController@create');
+	Route::post('user/create', array('before' =>'csrf', 'uses' => 'UserController@create'));
+	Route::get('user/update/{id}','UserController@update');
+	Route::post('user/update/{id}', array('before' =>'csrf', 'uses' => 'UserController@update'));
+	
+}
+
 
 Route::get('event','EventController@index');
 Route::get('event/detail/{id}','EventController@detail');
