@@ -30,7 +30,7 @@ Route::controllers([
 
 //Admin Controller
 Route::group(['middleware' => 'auth','before' => 'admin'], function () {
-	
+
 	// dashboard
 	Route::get('admin', 'AdminController@index');
 
@@ -63,12 +63,25 @@ Route::group(['middleware' => 'auth','before' => 'admin'], function () {
 
 });
 
-Route::get('nondept', 'NonDeptController@index');
-Route::get('dept', 'DeptController@index');
-Route::get('event','EventController@index');
-Route::get('event/detail/{id}','EventController@detail');
-Route::get('event/delete/{id}','EventController@delete');
-Route::get('event/create','EventController@create');
-Route::post('event/create', array('before' =>'csrf', 'uses' => 'EventController@create'));
-Route::get('event/update/{id}','EventController@update');
-Route::post('event/update/{id}', array('before' =>'csrf', 'uses' => 'EventController@update'));
+//Admin Controller
+Route::group(['middleware' => 'auth','before' => 'nondep'], function () {
+
+    Route::get('nondept', 'NonDeptController@index');
+
+    Route::get('event','EventController@index');
+    Route::get('event/detail/{id}','EventController@detail');
+    Route::get('event/delete/{id}','EventController@delete');
+    Route::get('event/create','EventController@create');
+    Route::post('event/create', array('before' =>'csrf', 'uses' => 'EventController@create'));
+    Route::get('event/update/{id}','EventController@update');
+    Route::post('event/update/{id}', array('before' =>'csrf', 'uses' => 'EventController@update'));
+
+
+    Route::get('question','QuestionController@index');
+    Route::get('question/detail/{id}','QuestionController@detail');
+    Route::get('question/delete/{id}','QuestionController@delete');
+    Route::get('question/create','QuestionController@create');
+    Route::post('question/create', array('before' =>'csrf', 'uses' => 'QuestionController@create'));
+    Route::get('question/update/{id}','QuestionController@update');
+    Route::post('question/update/{id}', array('before' =>'csrf', 'uses' => 'QuestionController@update'));
+});

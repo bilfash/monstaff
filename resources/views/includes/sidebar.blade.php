@@ -96,7 +96,6 @@
         <li class="treeview" >
             <a href="#">
                 <i class="fa fa-folder"></i>
-<<<<<<< HEAD
                 <span>Feedback</span>
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
@@ -108,9 +107,24 @@
                     </a>
                 </li>
             </ul>
+        </li>
+        <li class="treeview" >
+            <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Pivot</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ URL::to('feedback/create') }}">
+                    <a href="{{ URL::to('pivot') }}">
+                        <i class="fa fa-angle-double-right"></i>
+                        Manage
+                    </a>
+                </li>
+            </ul>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="{{ URL::to('pivot/create') }}">
                         <i class="fa fa-angle-double-right"></i>
                         Create
                     </a>
@@ -143,8 +157,6 @@
         <li class="treeview" >
             <a href="#">
                 <i class="fa fa-folder"></i>
-=======
->>>>>>> a28719ec7438830e25213e3033c21b7dfa20f50e
                 <span>Question</span>
                 <i class="fa fa-angle-left pull-right"></i>
             </a>

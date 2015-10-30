@@ -2,32 +2,52 @@
 @section('content')
 @include('partials.flash-overlay-modal')
 <section class="content-header">
-    <h1>Departemen</h1>
+    <h1>Pertanyaan</h1>
 </section>
 <section class="content">
     <div class="row">
         <div class="col-md-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Detail Departemen</h3>
+                    <h3 class="box-title">Detail Pertanyaan</h3>
                 </div>
                 <div class="box-body">
                     <div class="col-md-12">
                     @if ($item != null)
-                    <a href="{{ URL::to('department/update/' . $item->id) }}" class="btn btn-primary" title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>
-                    <a href="{{ URL::to('department/delete/' . $item->id) }}" class="btn btn-danger"title="Hapus"><span class="glyphicon glyphicon-remove"></span></a>
+                    <a href="{{ URL::to('question/update/' . $item->id) }}" class="btn btn-primary" title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a href="{{ URL::to('question/delete/' . $item->id) }}" class="btn btn-danger"title="Hapus"><span class="glyphicon glyphicon-remove"></span></a>
                     @endif
-                    <a href="{{ URL::to('department') }}" class="btn btn-default" title="Kembali ke Daftar"><span class="glyphicon glyphicon-list"></span></a>
+                    <a href="{{ URL::to('question') }}" class="btn btn-default" title="Kembali ke Daftar"><span class="glyphicon glyphicon-list"></span></a>
                     <br><br>
-                    @if ($item != null)
+                    @if ($item != null && $item->softDelete==null )
                     <table class="table table-striped table-hover table-bordered">
                         <tbody>
                             <tr>
-                                <th class="col-md-3">Nama</th>
-                                <td>{{ $item->name }}</td>
+                                <th class="col-md-3">Judul Pertanyaan</th>
+                                <td>{{ $item->title }}</td>
                             </tr>
                             <tr>
-                                <th>Enabled</th>
+                                <th class="col-md-3">Isi Pertanyaan</th>
+                                <td>{{ $item->content }}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-md-3">Teks Pendukung / <i>Help Text</i></th>
+                                <td>{{ $item->helptext }}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-md-3">Ditujukan Untuk/<i>Help Text</i></th>
+                                <td>
+                                  <!--  TODO -->
+                                  @if($item->role==1)
+                                    Semua Fungsionaris
+                                  @elseif($item->role==2)
+                                    Pengurus Harian
+                                  @else
+                                    Staff
+                                  @endif</td>
+                            </tr>
+                            <tr>
+                                <th class="col-md-1">Enabled</th>
                                 <td>{{ $item->enabled ? 'Ya' : 'Tidak' }}</td>
                             </tr>
                         </tbody>

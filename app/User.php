@@ -11,7 +11,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	use Authenticatable, CanResetPassword, SoftDeletes;
 
-	protected $table = 'users';
+	 protected $table = 'users';
     protected $primaryKey = 'id';
     public $timestamps = true;
     public $incrementing = true;
@@ -69,6 +69,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function setRememberToken($value)
     {
         $this->{$this->getRememberTokenName()} = $value;
-    }	
+    }
 
 }

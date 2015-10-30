@@ -18,7 +18,7 @@ class EventController extends Controller {
 
 	public function index()
 	{
-		$this->data['items'] = Event::get();
+    $this->data['items'] = Event::orderBy('created_at','desc')->get();
 		return view('pages.event.index', $this->data);
 	}
 
@@ -29,10 +29,9 @@ class EventController extends Controller {
 	 */
 	public function create(Request $request)
 	{
-		$this->data['role']=2;
 		if ($request->isMethod('get'))
 				{
-					$this->data['items'] = Event::get();
+          $this->data['items'] = Event::orderBy('created_at','desc')->get();
 						return view('pages.event.create', $this->data);
 				}
 				elseif ($request->isMethod('post'))
@@ -43,22 +42,6 @@ class EventController extends Controller {
 		}
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function delete($id)
 	{
 
@@ -94,7 +77,7 @@ class EventController extends Controller {
 	{
 		if ($request->isMethod('get'))
         {
-        	$this->data['items'] = Event::get();
+        	$this->data['items'] = Event::orderBy('created_at','asc')->get();
         	$this->data['lala'] = Event::find($id);
 			if($this->data['lala'])
 				return view('pages.event.update', $this->data);

@@ -3,7 +3,7 @@
 @include('partials.flash-overlay-modal')
 
 <section class="content-header">
-    <h1>Departemen</h1>
+    <h1>Event</h1>
 </section>
 <section class="content">
     <div class="row">
@@ -26,6 +26,7 @@
                         </div>
                         <div class="form-group">
                           <label for="inputEmail3" class="col-sm-4 control-label">Start</label>
+                          <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
                             <div class="input-group">
                               <input type="date" class="form-control pull-right" id="reservationtime" name='start'>
@@ -34,6 +35,7 @@
                         </div>
                         <div class="form-group">
                           <label for="inputEmail3" class="col-sm-4 control-label">End</label>
+                          <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
                             <div class="input-group">
                               <input type="date" class="form-control pull-right" id="reservationtime" name='end'>
@@ -61,20 +63,17 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <th class="text-center" style="width: 10px">#</th>
-                                <th class="text-center">Nama Event</th>
-                                <th class="text-center">Start</th>
-                                <th class="text-center">End</th>
-                                <th class="text-center">Dibuat Oleh</th>
+                                <th class="col-md-1">#</th>
+                                <th >Nama Event</th>
+                                <th class="col-md-1">Dibuat Oleh </th>
                                 <?php $i = 1;?>
                             </tr>
                             @foreach($items as $item)
                             <tr>
                                 <td>{{$i++}}</td>
-                                <td>{{$item->name}}</td>
-                                <td>{{$item->start}}</td>
-                                <td>{{$item->end}}</td>
+                                <td><a href="{{ URL::to('position/detail/' . $item->id) }}" title="">{{ $item->name }}</a></td>
                                 <td>{{$item->assignedby}}</td>
+                                <!--  TODO -->
                             </tr>
                             @endforeach
                         </tbody>

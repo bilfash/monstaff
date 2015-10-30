@@ -25,6 +25,7 @@
                         </div>
                         <div class="form-group">
                           <label for="inputEmail3" class="col-sm-4 control-label">Start</label>
+                          <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
                             <div class="input-group">
                               <input type="date" class="form-control pull-right"value="{{ $lala->start }}" id="reservationtime" name='start'>
@@ -33,6 +34,7 @@
                         </div>
                         <div class="form-group">
                           <label for="inputEmail3" class="col-sm-4 control-label">End</label>
+                          <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
                             <div class="input-group">
                               <input type="date" class="form-control pull-right" value="{{ $lala->end }}" id="reservationtime" name='end'>
