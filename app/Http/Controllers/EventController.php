@@ -10,12 +10,6 @@ use App\Event;
 
 class EventController extends Controller {
 
-	public function __constructor(){
-		if(Auth::id()!=1){
-			return redirect('/');
-		}
-	}
-
 	public function index()
 	{
     $this->data['items'] = Event::orderBy('created_at','desc')->get();

@@ -7,7 +7,7 @@ class Feedback extends Model {
 
 	use SoftDeletes;
 
-	protected $table = 'feedbacks';
+	  protected $table = 'feedbacks';
     protected $primaryKey = 'id';
     public $timestamps = true;
     public $incrementing = true;

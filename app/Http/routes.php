@@ -54,7 +54,6 @@ Route::group(['middleware' => 'auth','before' => 'admin'], function () {
 
 	// user
 	Route::get('user','UserController@index');
-	Route::get('user/detail/{id}','UserController@detail');
 	Route::get('user/delete/{id}','UserController@delete');
 	Route::get('user/create','UserController@create');
 	Route::post('user/create', array('before' =>'csrf', 'uses' => 'UserController@create'));
@@ -67,6 +66,9 @@ Route::group(['middleware' => 'auth','before' => 'admin'], function () {
 Route::group(['middleware' => 'auth','before' => 'nondep'], function () {
 
     Route::get('nondept', 'NonDeptController@index');
+
+    Route::get('feedback', 'FeedbackController@index');
+    Route::get('feedback/detail/{id}', 'FeedbackController@update');
 
     Route::get('event','EventController@index');
     Route::get('event/detail/{id}','EventController@detail');

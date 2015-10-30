@@ -116,7 +116,7 @@
             </a>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ URL::to('pivot') }}">
+                    <a href="{{ URL::to('feedback') }}">
                         <i class="fa fa-angle-double-right"></i>
                         Manage
                     </a>
@@ -124,7 +124,7 @@
             </ul>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ URL::to('pivot/create') }}">
+                    <a href="{{ URL::to('pivot') }}">
                         <i class="fa fa-angle-double-right"></i>
                         Create
                     </a>
