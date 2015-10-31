@@ -11,21 +11,19 @@ use App\Position;
 
 class QuestionController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-
+	public function getRoles()
+  {
+      return [
+            ['id'=>1,'value'=>'Semua Fungsionaris'],
+            ['id'=>2,'value'=>'Pengurus Harian'],
+            ['id'=>3,'value'=>'Staff']
+          ];
+  }
 	public function index(Request $request)
 	{
       if ($request->isMethod('get'))
         {
-          $this->data['roles'] = [
-                ['id'=>1,'value'=>'Semua Fungsionaris'],
-                ['id'=>2,'value'=>'Pengurus Harian'],
-                ['id'=>3,'value'=>'Staff']
-              ];
+          $this->data['roles'] = $this->getRoles();
           $this->data['items'] = Question::where('enabled',1)->get();
           return view('pages.question.index', $this->data);
         }
@@ -35,11 +33,7 @@ class QuestionController extends Controller {
 	{
   	if ($request->isMethod('get'))
     {
-      $this->data['roles'] = [
-            ['id'=>1,'value'=>'Semua Fungsionaris'],
-            ['id'=>2,'value'=>'Pengurus Harian'],
-            ['id'=>3,'value'=>'Staff']
-          ];
+      $this->data['roles'] = $this->getRoles();
       $this->data['items'] = Question::where('enabled',1)->get();
         return view('pages.question.create', $this->data);
     }
@@ -59,7 +53,7 @@ class QuestionController extends Controller {
 	public function detail($id)
   {
     $this->data['item'] = Question::find($id);
-    $this->data['roles'] = $this->getRoles;
+    $this->data['roles'] = $this->getRoles();
     if($this->data['item'])
         return view('pages.question.detail', $this->data);
     else
@@ -71,7 +65,7 @@ class QuestionController extends Controller {
 	{
     if ($request->isMethod('get'))
     {
-        $this->data['roles'] = $this->getRoles;
+        $this->data['roles'] = $this->getRoles();
         $this->data['items'] = Question::get();
         $this->data['old'] = Question::find($id);
         if($this->data['old'])

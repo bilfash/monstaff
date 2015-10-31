@@ -18,6 +18,7 @@
                     <a href="{{ URL::to('event/delete/' . $item->id) }}" class="btn btn-danger"title="Hapus"><span class="glyphicon glyphicon-remove"></span></a>
                     @endif
                     <a href="{{ URL::to('event') }}" class="btn btn-default" title="Kembali ke Daftar"><span class="glyphicon glyphicon-list"></span></a>
+                    <a href="{{ URL::to('event/ '.$item->id.'/update/score') }}" class="btn btn-success" title="Tambah">Ubah Skor Pertanyaan</a>
                     <br><br>
                     @if ($item != null)
                     <table class="table table-striped table-hover table-bordered">

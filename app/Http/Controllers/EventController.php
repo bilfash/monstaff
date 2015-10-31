@@ -49,7 +49,9 @@ class EventController extends Controller {
 
 	public function delete($id)
 	{
-    if($event = Event::find($id)){
+    if($event = Event::find($id))
+    {
+        $event->question()->detach();
 				$event->enabled = 0;
 				$event->delete();
 				return redirect('event');
@@ -85,12 +87,6 @@ class EventController extends Controller {
     }
 	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function detail($id)
 	{
 		$this->data['item'] = Event::find($id);

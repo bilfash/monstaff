@@ -32,7 +32,7 @@ class Question extends Model {
 
     public function event()
     {
-      return $this->belongsToMany('App\Event', 'pivots','questionid','eventid')->withTimestamps();
+      return $this->belongsToMany('App\Event', 'pivots','questionid','eventid')->withTimestamps()->withPivot('score');
     }
 
 }

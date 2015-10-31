@@ -23,12 +23,9 @@ class Event extends Model {
 
     public function question()
     {
-      return $this->belongsToMany('App\Question', 'pivots','eventid','questionid')->withTimestamps();
+      return $this->belongsToMany('App\Question', 'pivots','eventid','questionid')->withPivot('score')->withTimestamps();
     }
 
-    public function questions(){
-      return $this->hasManyThrough('App\Question','App\Pivot','questionid','eventid');
-    }
     public function score()
     {
     	return $this->hasMany('App\Score', 'eventid', 'id');
