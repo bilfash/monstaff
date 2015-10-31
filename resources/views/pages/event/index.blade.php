@@ -25,9 +25,7 @@
                             <tr>
                                 <th class="col-md-1 text-center">No.</th>
                                 <th class="text-center" >Nama Event</th>
-                                <th class="text-center">Start</th>
-                                <th class="text-center">End</th>
-                                <th class="text-center">Ditambahkan Oleh</th>
+                                <th class="text-center">Enabled</th>
                                 <th class="col-md-1 text-center">Menu</th>
                             </tr>
                         </thead>
@@ -39,9 +37,7 @@
 
                                 <td><a href="{{ URL::to('event/detail/' . $item->id) }}" title="">{{ $item->name }}</a></td>
 
-                                <td> {{ $item->start }} </td>
-
-                                <td> {{ $item->end }} </td>
+                                <td> {{ $item->enabled ? ' Ya ' : 'Tidak' }} </td>
                                 <td></td>
 
                                 <td class="text-center">

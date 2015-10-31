@@ -116,14 +116,6 @@
             </a>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ URL::to('pivot') }}">
-                        <i class="fa fa-angle-double-right"></i>
-                        Manage
-                    </a>
-                </li>
-            </ul>
-            <ul class="treeview-menu">
-                <li>
                     <a href="{{ URL::to('pivot/create') }}">
                         <i class="fa fa-angle-double-right"></i>
                         Create

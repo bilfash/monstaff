@@ -20,7 +20,7 @@ class Question extends Model {
         'role',
         'enabled'
     );
-    
+
     protected $softDelete = true;
     protected $dates = ['deleted_at'];
 
@@ -31,7 +31,7 @@ class Question extends Model {
 
     public function event()
     {
-      return $this->belongsToMany('App\Event', 'pivots','questionid','eventid');
+      return $this->belongsToMany('App\Event', 'pivots','questionid','eventid')->withTimestamps();
     }
 
 }

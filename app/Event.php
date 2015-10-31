@@ -22,7 +22,7 @@ class Event extends Model {
 
     public function question()
     {
-      return $this->belongsToMany('App\Question','App\Pivot','questionid','eventid');
+      return $this->belongsToMany('App\Question', 'pivots','eventid','questionid')->withTimestamps();
     }
 
     public function score()
@@ -30,8 +30,7 @@ class Event extends Model {
     	return $this->hasMany('App\Score', 'eventid', 'id');
     }
 
-    public function pivot(){
-      return $this->belongsToMany('App\Question','pivots','eventid','questionid');
-    }
+
+
 
 }

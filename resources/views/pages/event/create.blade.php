@@ -16,7 +16,7 @@
                 <!-- form start -->
                 <form action="" method="post" class="form-horizontal">
                     <div class="box-body">
-                        <input type="hidden" name="enabled" value="1">
+                        <input type="hidden" name="enabled" value="0">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-4 control-label">Nama Event</label>

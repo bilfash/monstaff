@@ -17,7 +17,8 @@ class PivotController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-      $this->data['items'] = Pivot::get();
+      $this->data['pivots'] = Pivot::get();
+      // return dd($this->data['pivots']);
           return view('pages.pivot.index', $this->data);
 
 	}
@@ -32,17 +33,21 @@ class PivotController extends Controller {
     if ($request->isMethod('get'))
     {
       $this->data['questions'] = Question::get();
-      $this->data['events'] = Event::get();
+      $this->data['events'] = Event::where('enabled','0')->get();
         return view('pages.pivot.create', $this->data);
     }
     elseif ($request->isMethod('post'))
     {
-      $data = $request->all();
+        $data = $request->all();
+        // return var_dump($data);
+        $event = Event::find($data['event']);
+        $event->question()->sync($data['questions']);
+        $satu = 1;
+        $event->update(['enabled'=>1]);
+        // Pivot::create($data);
+            return redirect('event');
 
-      // dd($data);
-      var_dump($data['questionid']);
-      // Pivot::create($data);
-        // return redirect('pivot');
+
     }
 	}
 

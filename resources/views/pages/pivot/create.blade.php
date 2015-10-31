@@ -22,7 +22,7 @@
                           <label for="inputEmail3" class="col-sm-4 control-label">Event</label>
                           <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
-                            <select class="form-control select2"  data-placeholder="Pilih Event..." style="width: 100%;" name='eventid'>
+                            <select class="form-control select2"  data-placeholder="Pilih Event..." style="width: 100%;" name='event'>
                               @foreach($events as $q)
                                 <option value='{{ $q->id }}'>
                                     {{ $q->name }}
@@ -38,20 +38,12 @@
                           <label for="inputEmail3" class="col-sm-4 control-label">Question</label>
                           <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
-                              <select class="form-control select2" multiple="multiple" data-placeholder="Pilih Pertanyaan yang akan dimasukkan.." style="width: 100%;" name='questions' >
-                              {{ Form::select('questions',
-                              <?php echo '[';
-                                    foreach($questions as $q){
-                                      echo '"'.$q->id.'"=>"'.$q->value.'",';
-                              }
-                             echo ']';?>
-                                , '',['class'=>'form-control select2'])
-                              }}
-                              <!-- @foreach($questions as $q)
+                              <select class="form-control select2" multiple="multiple" data-placeholder="Pilih Pertanyaan yang akan dimasukkan.." style="width: 100%;" name='questions[]' >
+                              @foreach($questions as $q)
                                 <option style="width: 100%;" value='{{ $q->id }}'>
                                     {{ $q->title }}
                                 </option>
-                              @endforeach -->
+                              @endforeach
                             </select>
 
                           </div>
