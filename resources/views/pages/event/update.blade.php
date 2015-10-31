@@ -3,7 +3,7 @@
 @include('partials.flash-overlay-modal')
 
 <section class="content-header">
-    <h1>event</h1>
+    <h1>Event</h1>
 </section>
 <section class="content">
     <div class="row">
@@ -51,6 +51,23 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Question</label>
+                          <!-- TODO ubah format -->
+                          <div class=' col-sm-7'>
+                              <select class="form-control select2" multiple="multiple" data-placeholder="You may select this later" style="width: 100%;" name='questions[]' value='$lala->pivots->id'>
+                              @foreach($questions as $q)
+                                <option style="width: 100%;" value='{{$q->id}}'
+                                  @if( in_array( $q->id, (array)$lala->question))
+                                    selected='true'
+                                  @endif
+                                  >
+                                    {{ $q->title }}
+                                </option>
+                              @endforeach
+                            </select>
+                          </div>
+                        </div>
                     </div><!-- /.box-body -->
                     <div class="box-footer">
                         <div class="col-sm-4">
@@ -66,26 +83,49 @@
             <!-- Horizontal Form -->
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <h3 class="box-title">List event</h3>
+                    <h3 class="box-title text-center">List Pertanyaan Sebelumnya</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                     <table class="table">
                         <tbody>
                             <tr>
                                 <th class="text-center" style="width: 10px">#</th>
-                                <th class="text-center">Nama event</th>
+                                <th class="text-center">Judul Pertanyaan</th>
                                 <?php $i = 1;?>
                             </tr>
-                            @foreach($items as $item)
+                            @foreach($lala->question as $pivot)
                             <tr>
-                                <td>{{$i++}}</td>
-                                <td>{{$item->name}}</td>
+                                <th class="col-md-1">{{ $i++ }}</th>
+                                <td ><a href="{{ URL::to('question/detail/' . $pivot->id) }}" title="">{{ $pivot->title }}</a></td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div><!-- /.box-body -->
-            </div><!-- /.box -->
+            </div>
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title text-center">List Pertanyaan</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th class="text-center" style="width: 10px">#</th>
+                                <th class="text-center">Judul Pertanyaan</th>
+                                <?php $i = 1;?>
+                            </tr>
+                            @foreach($questions as $pivot)
+                            <tr>
+                                <th class="col-md-1">{{ $i++ }}</th>
+                                <td ><a href="{{ URL::to('question/detail/' . $pivot->id) }}" title="">{{ $pivot->title }}</a></td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div>
+            <!-- /.box -->
         </div><!-- /.box -->
     </div>
 </section>
@@ -94,5 +134,13 @@
 @stop
 @section('custom_foot')
     <script type="text/javascript">
+      $(function(){
+
+        //Initialize Select2 Elements
+        $(".select2").select2();
+
+        //Datemask dd/mm/yyyy
+        $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+      });
     </script>
 @stop

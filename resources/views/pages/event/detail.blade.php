@@ -9,7 +9,7 @@
         <div class="col-md-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Detail Event</h3>
+                    <h2 >Detail Event</h2>
                 </div>
                 <div class="box-body">
                     <div class="col-md-12">
@@ -24,7 +24,11 @@
                         <tbody>
                             <tr>
                                 <th class="col-md-3">Nama</th>
-                                <td>{{ $item->name }}</td>
+                                <td><strong>{{ $item->name }}</strong></td>
+                            </tr>
+                            <tr>
+                                <th>Enabled</th>
+                                <td>{{ $item->enabled ? 'Ya' : 'Tidak' }}</td>
                             </tr>
                             <tr>
                                 <th class="col-md-3">Start</th>
@@ -35,14 +39,27 @@
                                 <td>{{ $item->end }}</td>
                             </tr>
                             <tr>
+                                <th class="col-md-3">Banyak Pertanyaan</th>
+                                <td> {{$item->question->count()}} </td>
+                            </tr>
+                            <tr>
                                 <th class="col-md-3">Ditambahkan Oleh</th>
                                 <td> <!-- TODO --> </td>
                             </tr>
-                            <tr>
-                                <th>Enabled</th>
-                                <td>{{ $item->enabled ? 'Ya' : 'Tidak' }}</td>
-                            </tr>
                         </tbody>
+                    </table>
+                    @endif
+                    @if ($item->question != null)
+                    <?php $i=1?>
+                    <h4>Detail Pertanyaan</h4>
+                    <table class="table">
+                        <tbody>
+                            @foreach($item->question as $pivot)
+                            <tr>
+                                <th class="col-md-1">{{ $i++ }}</th>
+                                <td class="col-md-3"><a href="{{ URL::to('question/detail/' . $pivot->id) }}" title="">{{ $pivot->title }}</a></td>
+                            </tr>
+                            @endforeach
                     </table>
                     @endif
                 </div>

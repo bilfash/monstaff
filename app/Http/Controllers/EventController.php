@@ -16,14 +16,10 @@ class EventController extends Controller {
   public function index()
 	{
     $this->data['items'] = Event::orderBy('created_at','desc')->get();
+    $this->data['pivots'] = Pivot::get();
 		return view('pages.event.index', $this->data);
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
 	public function create(Request $request)
 	{
 		if ($request->isMethod('get'))
@@ -35,43 +31,35 @@ class EventController extends Controller {
 				}
 				elseif ($request->isMethod('post'))
 				{
-					// TODO
-					$variabel = Event::create($request->all());
-						return redirect('event');
+            $data = $request->all();
+
+					  $event = Event::create($request->all());
+            if($event)
+            {
+              if($data['questions']){
+                $event->question()->sync($data['questions']);
+                $event->update(['enabled'=>1]);
+              }
+              return redirect('event');
+            }
+            else
+                return redirect('event');
 		}
 	}
 
 	public function delete($id)
 	{
-
-		if($department = Event::find($id)){
-				$department->enabled = 0;
-				$department->delete();
+    if($event = Event::find($id)){
+				$event->enabled = 0;
+				$event->delete();
 				return redirect('event');
 		}
 		else
 		{
-			return redirect('event')->withErrors($department);
+			return redirect('event');
 		}
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function update(Request $request,$id)
 	{
 		if ($request->isMethod('get'))
@@ -79,17 +67,22 @@ class EventController extends Controller {
         	$this->data['items'] = Event::orderBy('created_at','asc')->get();
           $this->data['questions'] = Question::get();
         	$this->data['lala'] = Event::find($id);
-			if($this->data['lala'])
-				return view('pages.event.update', $this->data);
-			else
-				return redirect('event');
-        }
-        elseif ($request->isMethod('post'))
-        {
-        	$lala = Event::find($id);
-        	$lala->update(Input::all());
-            return redirect('Event/detail/'.$id);
-        }
+
+          if($this->data['lala'])
+				      return view('pages.event.update', $this->data);
+			    else
+				      return redirect('event');
+      }
+    elseif ($request->isMethod('post'))
+    {
+          $event = Event::find($id);
+        	$event ->update($request->all());
+          $event->question()->detach();
+          // return var_dump($request->all());
+
+          $event->question()->sync($request->all()['questions']);
+          return redirect('event/detail/'.$id);
+    }
 	}
 
 	/**

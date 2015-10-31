@@ -15,7 +15,8 @@ class Event extends Model {
         'name',
         'start',
         'end',
-        'enabled'
+        'enabled',
+        'question'
     );
     protected $softDelete = true;
     protected $dates = ['deleted_at'];
@@ -25,12 +26,12 @@ class Event extends Model {
       return $this->belongsToMany('App\Question', 'pivots','eventid','questionid')->withTimestamps();
     }
 
+    public function questions(){
+      return $this->hasManyThrough('App\Question','App\Pivot','questionid','eventid');
+    }
     public function score()
     {
     	return $this->hasMany('App\Score', 'eventid', 'id');
     }
-
-
-
 
 }

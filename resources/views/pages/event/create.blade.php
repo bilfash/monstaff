@@ -42,6 +42,20 @@
                             </div><!-- /.input group -->
                           </div>
                         </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Question</label>
+                          <!-- TODO ubah format -->
+                          <div class=' col-sm-7'>
+                              <select class="form-control select2" multiple="multiple" data-placeholder="You may select this later" style="width: 100%;" name='questions[]' >
+                              @foreach($questions as $q)
+                                <option style="width: 100%;" value='{{ $q->id }}'>
+                                    {{ $q->title }}
+                                </option>
+                              @endforeach
+                            </select>
+                          </div>
+                        </div>
+
                     </div><!-- /.box-body -->
                     <div class="box-footer">
                         <div class="col-sm-4">
@@ -88,6 +102,13 @@
 @stop
 @section('custom_foot')
     <script type="text/javascript">
+      $(function(){
+
+        //Initialize Select2 Elements
         $(".select2").select2();
+
+        //Datemask dd/mm/yyyy
+        $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+      });
     </script>
 @stop

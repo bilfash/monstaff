@@ -23,10 +23,21 @@
                     <table class="table table-striped table-hover table-bordered" id="table-event">
                         <thead>
                             <tr>
-                                <th class="col-md-1 text-center">No.</th>
-                                <th class="text-center" >Nama Event</th>
-                                <th class="text-center">Enabled</th>
-                                <th class="col-md-1 text-center">Menu</th>
+                                <th class="col-md-1 text-center">
+                                  No.
+                                </th>
+                                <th class="text-center">
+                                  Nama Event
+                                </th>
+                                <th class='col-md-2 text-center'>
+                                  Banyak Pertanyaan
+                                </th>
+                                <th class="col-md-2 text-center">
+                                  Enabled
+                                </th>
+                                <th class="col-md-1 text-center">
+                                  Menu
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,9 +47,9 @@
                                 <td class="text-center">{{ $i++ }}</td>
 
                                 <td><a href="{{ URL::to('event/detail/' . $item->id) }}" title="">{{ $item->name }}</a></td>
+                                <td> {{ $item->enabled ? ' $pivots->pivot->event ' : '-' }} </td>
 
                                 <td> {{ $item->enabled ? ' Ya ' : 'Tidak' }} </td>
-                                <td></td>
 
                                 <td class="text-center">
                                 <a href="{{ URL::to('event/update/' . $item->id) }}" class="btn btn-primary btn-xs"title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>

@@ -21,6 +21,7 @@ class Question extends Model {
         'enabled'
     );
 
+    protected $touches = ['question'];
     protected $softDelete = true;
     protected $dates = ['deleted_at'];
 
