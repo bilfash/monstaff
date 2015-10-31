@@ -15,10 +15,11 @@ class CreatePivotsTable extends Migration {
 		Schema::create('pivots', function(Blueprint $table)
 		{
 			$table->increments('id');
-      $this->integer('eventid');
-      $this->integer('questionid');
-      $this->integer('score');
-			$table->timestamps();
+      $table->integer('eventid')->nullable();
+      $table->integer('questionid')->nullable();
+      $table->integer('score')->nullable();
+			$table->softDeletes();
+            $table->nullableTimestamps();
 		});
 	}
 

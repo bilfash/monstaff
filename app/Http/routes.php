@@ -68,7 +68,7 @@ Route::group(['middleware' => 'auth','before' => 'nondep'], function () {
     Route::get('nondept', 'NonDeptController@index');
 
     Route::get('feedback', 'FeedbackController@index');
-    Route::get('feedback/detail/{id}', 'FeedbackController@update');
+    Route::get('feedback/delete/{id}', 'FeedbackController@delete');
 
     Route::get('event','EventController@index');
     Route::get('event/detail/{id}','EventController@detail');
@@ -77,6 +77,14 @@ Route::group(['middleware' => 'auth','before' => 'nondep'], function () {
     Route::post('event/create', array('before' =>'csrf', 'uses' => 'EventController@create'));
     Route::get('event/update/{id}','EventController@update');
     Route::post('event/update/{id}', array('before' =>'csrf', 'uses' => 'EventController@update'));
+
+    Route::get('pivot','PivotController@index');
+    Route::get('pivot/detail/{id}','PivotController@detail');
+    Route::get('pivot/delete/{id}','PivotController@delete');
+    Route::get('pivot/create','PivotController@create');
+    Route::post('pivot/create', array('before' =>'csrf', 'uses' => 'PivotController@create'));
+    Route::get('pivot/update/{id}','PivotController@update');
+    Route::post('pivot/update/{id}', array('before' =>'csrf', 'uses' => 'PivotController@update'));
 
 
     Route::get('question','QuestionController@index');

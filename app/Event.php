@@ -7,7 +7,7 @@ class Event extends Model {
 
 	use SoftDeletes;
 
-	protected $table = 'events';
+	  protected $table = 'events';
     protected $primaryKey = 'id';
     public $timestamps = true;
     public $incrementing = true;
@@ -22,12 +22,16 @@ class Event extends Model {
 
     public function question()
     {
-    	return $this->hasMany('App\Question', 'eventid', 'id');
+      return $this->belongsToMany('App\Question','App\Pivot','questionid','eventid');
     }
 
     public function score()
     {
     	return $this->hasMany('App\Score', 'eventid', 'id');
+    }
+
+    public function pivot(){
+      return $this->belongsToMany('App\Question','pivots','eventid','questionid');
     }
 
 }

@@ -3,7 +3,7 @@
 @include('partials.flash-overlay-modal')
 
 <section class="content-header">
-    <h1>Event</h1>
+    <h1>event</h1>
 </section>
 <section class="content">
     <div class="row">
@@ -11,17 +11,16 @@
             <!-- Horizontal Form -->
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Buat Event</h3>
+                    <h3 class="box-title">Update event</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 <form action="" method="post" class="form-horizontal">
                     <div class="box-body">
-                        <input type="hidden" name="enabled" value="1">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-4 control-label">Nama Event</label>
+                            <label for="inputEmail3" class="col-sm-4 control-label">Nama event</label>
                             <div class="col-sm-7">
-                                <input type="text" name="name" class="form-control" placeholder="Nama Event" required>
+                                <input type="text" name="name" class="form-control" value="{{ $lala->name }}" placeholder="Nama event" required>
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             </div>
                         </div>
                         <div class="form-group">
@@ -29,7 +28,7 @@
                           <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
                             <div class="input-group">
-                              <input type="date" class="form-control pull-right" id="reservationtime" name='start'>
+                              <input type="date" class="form-control pull-right"value="{{ $lala->start }}" id="reservationtime" name='start'>
                             </div><!-- /.input group -->
                           </div>
                         </div>
@@ -38,9 +37,19 @@
                           <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
                             <div class="input-group">
-                              <input type="date" class="form-control pull-right" id="reservationtime" name='end'>
+                              <input type="date" class="form-control pull-right" value="{{ $lala->end }}" id="reservationtime" name='end'>
                             </div><!-- /.input group -->
                           </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">Enabled</label>
+                            <div class="col-sm-7">
+                                <select class="selecter form-control" name="enabled">
+                                    <option value="1" @if ($lala->enabled == '1') {{ 'selected' }} @endif >Ya</option>
+                                    <option value="0" @if ($lala->enabled == '0') {{ 'selected' }} @endif >Tidak</option>
+                                </select>
+                            </div>
                         </div>
                     </div><!-- /.box-body -->
                     <div class="box-footer">
@@ -57,23 +66,20 @@
             <!-- Horizontal Form -->
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <h3 class="box-title">List Event</h3>
+                    <h3 class="box-title">List event</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                     <table class="table">
                         <tbody>
                             <tr>
-                                <th class="col-md-1">#</th>
-                                <th >Nama Event</th>
-                                <th class="col-md-1">Dibuat Oleh </th>
+                                <th class="text-center" style="width: 10px">#</th>
+                                <th class="text-center">Nama event</th>
                                 <?php $i = 1;?>
                             </tr>
                             @foreach($items as $item)
                             <tr>
                                 <td>{{$i++}}</td>
-                                <td><a href="{{ URL::to('position/detail/' . $item->id) }}" title=""> {{ $item->name }}</a></td>
-                                <td>{{$item->assignedby}}</td>
-                                <!--  TODO -->
+                                <td>{{$item->name}}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -88,6 +94,5 @@
 @stop
 @section('custom_foot')
     <script type="text/javascript">
-        $(".select2").select2();
     </script>
 @stop

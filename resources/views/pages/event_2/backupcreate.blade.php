@@ -16,12 +16,12 @@
                 <!-- form start -->
                 <form action="" method="post" class="form-horizontal">
                     <div class="box-body">
-                        <input type="hidden" name="enabled" value="1">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-4 control-label">Nama Event</label>
                             <div class="col-sm-7">
                                 <input type="text" name="name" class="form-control" placeholder="Nama Event" required>
+                                <input type="hidden" name="enabled" value="1">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             </div>
                         </div>
                         <div class="form-group">
@@ -42,6 +42,14 @@
                             </div><!-- /.input group -->
                           </div>
                         </div>
+
+                      <div class="form-group">
+                        <label>Multiple</label>
+                        <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+
+
+                        </select>
+                      </div>
                     </div><!-- /.box-body -->
                     <div class="box-footer">
                         <div class="col-sm-4">
@@ -71,7 +79,7 @@
                             @foreach($items as $item)
                             <tr>
                                 <td>{{$i++}}</td>
-                                <td><a href="{{ URL::to('position/detail/' . $item->id) }}" title=""> {{ $item->name }}</a></td>
+                                <td><a href="{{ URL::to('position/detail/' . $item->id) }}" title="">{{ $item->name }}</a></td>
                                 <td>{{$item->assignedby}}</td>
                                 <!--  TODO -->
                             </tr>
@@ -88,6 +96,5 @@
 @stop
 @section('custom_foot')
     <script type="text/javascript">
-        $(".select2").select2();
     </script>
 @stop

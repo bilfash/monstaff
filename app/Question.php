@@ -7,7 +7,7 @@ class Question extends Model {
 
 	use SoftDeletes;
 
-	protected $table = 'questions';
+	  protected $table = 'questions';
     protected $primaryKey = 'id';
     public $timestamps = true;
     public $incrementing = true;
@@ -20,6 +20,7 @@ class Question extends Model {
         'role',
         'enabled'
     );
+    
     protected $softDelete = true;
     protected $dates = ['deleted_at'];
 
@@ -30,7 +31,7 @@ class Question extends Model {
 
     public function event()
     {
-        return $this->belongsTo('App\Event', 'eventid', 'id');
+      return $this->belongsToMany('App\Event', 'pivots','questionid','eventid');
     }
 
 }

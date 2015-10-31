@@ -4,6 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Event;
+use App\Question;
+use App\Pivot;
 
 class PivotController extends Controller {
 
@@ -12,9 +15,11 @@ class PivotController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
-		//
+      $this->data['items'] = Pivot::get();
+          return view('pages.pivot.index', $this->data);
+
 	}
 
 	/**
@@ -22,26 +27,30 @@ class PivotController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create(Request $request)
 	{
-		//
-	}
+    if ($request->isMethod('get'))
+    {
+      $this->data['questions'] = Question::get();
+      $this->data['events'] = Event::get();
+        return view('pages.pivot.create', $this->data);
+    }
+    elseif ($request->isMethod('post'))
+    {
+      $data = $request->all();
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
+      // dd($data);
+      var_dump($data['questionid']);
+      // Pivot::create($data);
+        // return redirect('pivot');
+    }
 	}
 
 	/**
 	 * Display the specified resource.
 	 *
 	 * @param  int  $id
-	 * @return Response
+	 * @return Responses
 	 */
 	public function show($id)
 	{
@@ -78,7 +87,9 @@ class PivotController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$pivot = Pivot::find($id);
+		$pivot->delete();
+		return redirect('pivot');
 	}
 
 }

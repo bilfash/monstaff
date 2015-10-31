@@ -2,7 +2,7 @@
 @section('content')
 @include('partials.flash-overlay-modal')
 <section class="content-header">
-    <h1>Feedback</h1>
+    <h1>Pivot</h1>
 </section>
 <section class="content">
     <div class="row">
@@ -14,15 +14,25 @@
         <div class="col-md-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">List Feedback</h3>
+                    <h3 class="box-title">List Pivot</h3>
                 </div>
                 <div class="box-body">
-                    <table class="table table-striped table-hover table-bordered" id="table-department">
+                    <table class="table table-striped table-hover table-bordered" id="table-main">
                         <thead>
                             <tr>
                                 <th class="col-md-1 text-center">No.</th>
-                                <th class='col-md-2'> Ditulis Oleh</th>
-                                <th >Isi Feedback</th>
+                                <th>
+                                  Nama Event
+                                </th>
+                                <th class="col-md-1">
+                                  Banyak Pertanyaan
+                                </th>
+                                <th class="col-md-1">
+                                  Awal Pengisian
+                                </th>
+                                <th class="col-md-2">
+                                  Enabled
+                                </th>
                                 <th class="col-md-1 text-center">Menu</th>
                             </tr>
                         </thead>
@@ -31,7 +41,7 @@
                         @foreach ($items as $item)
                             <tr>
                                 <td class="text-center">{{ $i++ }}</td>
-                                <td><a href="{{ URL::to('department/detail/' . $item->id) }}" title="">{{ $item->user->name }}</a></td>
+                                <td><a href="{{ URL::to('pivot/detail/' . $item->id) }}" title="">{{ $item->user->name }}</a></td>
                                 <td>
                                   {{$item->content}}
                                 </td>
@@ -43,14 +53,14 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Hapus Feedback</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Hapus Pivot</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     Apakah anda yakin menghapus ? <br><br><br> klik "Ok!!" untuk konfirmasi
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                <a href="{{ URL::to('feedback/delete/' . $item->id) }}">
+                                                <a href="{{ URL::to('pivot/delete/' . $item->id) }}">
                                                     <button type="button" class="btn btn-primary">Ok!!</button>
                                                 </a>
                                                 </div>
@@ -68,10 +78,10 @@
     </div>
 </section>
 
-<script department="text/javascript">
+<script pivot="text/javascript">
     $(document).ready(function(){
         $(function() {
-            $('#table-department').dataTable();
+            $('#table-main').dataTable();
             $('#flash-overlay-modal').modal();
         });
     });
