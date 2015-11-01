@@ -81,6 +81,7 @@ Route::group(['middleware' => 'auth','before' => 'nondep'], function () {
 
     Route::get('mark','MarkController@index');
     Route::get('mark/detail/{id}','MarkController@index');
+    Route::get('score','ScoreController@index');
 
     Route::get('question','QuestionController@index');
     Route::get('question/detail/{id}','QuestionController@detail');

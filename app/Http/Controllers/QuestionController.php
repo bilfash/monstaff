@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Question;
 use App\Event;
-use App\Position;
 
 
 class QuestionController extends Controller {
@@ -19,6 +18,7 @@ class QuestionController extends Controller {
             ['id'=>3,'value'=>'Staff']
           ];
   }
+
 	public function index(Request $request)
 	{
       if ($request->isMethod('get'))
@@ -40,7 +40,17 @@ class QuestionController extends Controller {
     elseif ($request->isMethod('post'))
     {
       $data = $request->all();
-      Question::create($data);
+      if(!array_key_exists ('helptext', $request->all()))
+      {
+          $request->all()['helptext']= '-';
+      }
+      Question::create([
+          'title' => $data['title'],
+          'content' => $data['content'],
+          'helptext' => $data['helptext'],
+          'score' => $data['score'],
+          'role' => $data['role']
+        ]);
         return redirect('question');
     }
 	}
@@ -89,9 +99,12 @@ class QuestionController extends Controller {
 	 */
 	public function delete($id)
 	{
-		$department = Question::find($id);
-		$department->delete();
-		return redirect('question');
+
+    		$row = Question::find($id);
+
+    		$row->delete();
+    		return redirect('question');
+
 	}
 
 

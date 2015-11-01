@@ -29,13 +29,13 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-4 control-label">Isi Pertanyaan</label>
                             <div class="col-sm-7">
-                              <textarea class="form-control" rows="3" placeholder="Isi Pertanyaan..." name='content'></textarea>
+                              <textarea class="form-control" rows="3" placeholder="Isi Pertanyaan..." name='content' required ></textarea>
                           </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-4 control-label">Teks Pembantu / Help Text</label>
                             <div class="col-sm-7">
-                              <textarea class="form-control" rows="3" placeholder="Teks Pembantu" name='helptext'></textarea>
+                              <textarea class="form-control" rows="3" placeholder="Teks Pembantu" name='helptext' >-</textarea>
                           </div>
                         </div>
                             <div class="form-group">
@@ -50,7 +50,7 @@
                             <select class="form-control select2" data-placeholder="Ditujukan Untuk..." name='role' style="width: 100%;">
                               @foreach ($roles as $role)
                                 <option value='{{ $role['id'] }}'>
-                                  {{$role['value']}}
+                                  {{ $role['value'] }}
                                 </option>
                               @endforeach
                           </select>

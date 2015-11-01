@@ -20,8 +20,10 @@
                             <tr>
                                 <th class="col-md-1">No.</th>
                                 <th class="col-md-2">User</th>
-                                <th class="col-md-2">Judul Pertanyaan</th>
-                                <th class="col-md-2">Status</th>
+                                <th >
+                                  Event
+                                </th>
+                                <th class="col-md-2"> Skor </th>
                                 <th class="col-md-1 text-center">Menu</th>
                             </tr>
                         </thead>
@@ -34,9 +36,7 @@
                                 <td>
                                   {{$item->event->title}}
                                 </td>
-                                <td>
-                                </td>
-                                <td class="text-center">{{ $item->score==null ? 'Belum Dinilai' : 'Sudah Dinilai' }}</td>
+                                <td class="text-center">{{ $item->score->score==null ? $item->score->score : 'Belum Dinilai' }}</td>
                                 <td class="text-center">
                                     <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal{{$i}}"><span class="glyphicon glyphicon-remove"></span></button>
                                     <!-- Modal -->

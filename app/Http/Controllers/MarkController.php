@@ -9,6 +9,7 @@ use App\User;
 use App\Score;
 use App\Event;
 use App\Question;
+
 class MarkController extends Controller {
 
   public function index(Request $request)

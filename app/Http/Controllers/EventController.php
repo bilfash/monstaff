@@ -36,7 +36,7 @@ class EventController extends Controller {
 					  $event = Event::create($request->all());
             if($event)
             {
-              if($data['questions']){
+              if( array_key_exists ('questions', $data) ){
                 $event->question()->sync($data['questions']);
                 $event->update(['enabled'=>1]);
               }

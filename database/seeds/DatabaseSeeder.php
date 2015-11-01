@@ -49,7 +49,7 @@ class DepartmentsTableSeeder extends Seeder {
          //delete users table records
          DB::table('departments')->delete();
          DB::table('departments')->insert(array(
-             array('id'=>0,'name'=>'Admin','enabled'=>'1'),
+             array( 'name'=>'Admin','enabled'=>'1'),
              array('name'=>'Non Departemen','enabled'=>'1'),
              array('name'=>'Kaderisasi dan Pemetaan','enabled'=>'1'),
              array('name'=>'Dalam Negeri','enabled'=>'1'),
@@ -72,7 +72,7 @@ class PositionsTableSeeder extends Seeder {
          //delete users table records
          DB::table('positions')->delete();
          DB::table('positions')->insert(array(
-             array('id'=>0,'name'=>'Admin','enabled'=>'1'),
+             array('name'=>'Admin','enabled'=>'1'),
              array('name'=>'Staff','enabled'=>'1'),
              array('name'=>'Ketua Himpunan','enabled'=>'1'),
              array('name'=>'Wakahima Internal','enabled'=>'1'),

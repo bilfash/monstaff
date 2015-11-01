@@ -21,9 +21,9 @@ class Event extends Model {
     protected $softDelete = true;
     protected $dates = ['deleted_at'];
 
-    public function question()
+    public function pivot()
     {
-      return $this->belongsToMany('App\Question', 'pivots','eventid','questionid')->withPivot('score')->withTimestamps();
+      return $this->hasMany('App\Pivot','eventid','id');
     }
 
     public function score()

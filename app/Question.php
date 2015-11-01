@@ -30,9 +30,10 @@ class Question extends Model {
     	return $this->hasMany('App\Score', 'questionid', 'id');
     }
 
-    public function event()
+    public function pivot()
     {
-      return $this->belongsToMany('App\Event', 'pivots','questionid','eventid')->withTimestamps()->withPivot('score');
+      return $this->hasMany('App\Pivot','questionid','id');
     }
+
 
 }
