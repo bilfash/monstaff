@@ -26,7 +26,7 @@
                                 <th class="col-md-1">No.</th>
                                 <th>Title</th>
                                 <th class="col-md-2">Ditujukan Untuk</th>
-                                <th class="col-md-1">Skor</th>
+                                <th class="col-md-1">Type</th>
                                 <th class="col-md-1">Enable</th>
                                 <th class="col-md-1 text-center">Aksi</th>
                             </tr>
@@ -47,10 +47,13 @@
                                   @else
                                     Staff
                                   @endif
-
                                 </td>
                                 <td>
-                                  {{ $item->score }}
+                                  @if($item->type==1)
+                                    Kuantitatif
+                                  @elseif($item->type==2)
+                                    Deskriptif
+                                  @endif
                                 </td>
 
                                 <td class="text-center">{{ $item->enabled ? 'Ya' : 'Tidak' }}</td>

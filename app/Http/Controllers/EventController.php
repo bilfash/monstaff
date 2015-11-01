@@ -80,9 +80,10 @@ class EventController extends Controller {
           $event = Event::find($id);
         	$event ->update($request->all());
           $event->question()->detach();
-          // return var_dump($request->all());
 
-          $event->question()->sync($request->all()['questions']);
+          if(isset($request->all()['questions']))
+              $event->question()->sync($request->all()['questions']);
+
           return redirect('event/detail/'.$id);
     }
 	}

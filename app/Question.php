@@ -15,13 +15,11 @@ class Question extends Model {
         'title',
         'content',
         'helptext',
-        'eventid',
-        'score',
         'role',
+        'type',
         'enabled'
     );
 
-    protected $touches = ['question'];
     protected $softDelete = true;
     protected $dates = ['deleted_at'];
 
@@ -30,10 +28,9 @@ class Question extends Model {
     	return $this->hasMany('App\Score', 'questionid', 'id');
     }
 
-    public function pivot()
+    public function event()
     {
-      return $this->hasMany('App\Pivot','questionid','id');
+      return $this->belongsToMany('App\Event', 'pivots','questionid','eventid')->withTimestamps()->withPivot('score');
     }
-
 
 }

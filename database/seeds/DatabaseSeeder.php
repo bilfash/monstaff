@@ -22,26 +22,6 @@ class DatabaseSeeder extends Seeder {
 
 }
 
-/*class DepartmentsTableSeeder extends Seeder {
-
-       public function run()
-       {
-         //delete users table records
-         DB::table('departments')->delete();
-         DB::table('departments')->insert(array(
-             array('name'=>'john','enabled'=>'1'),
-             array('name'=>'mark','enabled'=>'1'),
-             array('name'=>'Karl','enabled'=>'1'),
-             array('name'=>'marl','enabled'=>'1'),
-             array('name'=>'mary','enabled'=>'1'),
-             array('name'=>'sels','enabled'=>'1'),
-             array('name'=>'taylor','enabled'=>'1',),
-
-          ));
-       }
-
-}*/
-
 class DepartmentsTableSeeder extends Seeder {
 
        public function run()
@@ -100,6 +80,8 @@ class UsersTableSeeder extends Seeder {
              array(   'name'=>'john' , 'username'=>'wakahima' , 'password' => bcrypt('secret') , 'deptid' => '1' , 'positionid' => '2'),
              array(   'name'=>'bilfash' , 'username'=>'kadept' , 'password' => bcrypt('secret') , 'deptid' => '7' , 'positionid' => '7'),
              array(   'name'=>'sabila' , 'username'=>'staff' , 'password' => bcrypt('secret') , 'deptid' => '7' , 'positionid' => '1'),
+             array(   'name'=>'rafiar' , 'username'=>'staff' , 'password' => bcrypt('secret') , 'deptid' => '8' , 'positionid' => '1'),
+             array(   'name'=>'nafiar' , 'username'=>'staff' , 'password' => bcrypt('secret') , 'deptid' => '7' , 'positionid' => '1'),
           ));
        }
 

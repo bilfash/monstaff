@@ -19,11 +19,20 @@ class QuestionController extends Controller {
           ];
   }
 
+  public function getTypes()
+  {
+      return [
+            ['id'=>1,'value'=>'Kuantitatif ( 1 - 5 )'],
+            ['id'=>2,'value'=>'Deskriptif']
+          ];
+  }
+
 	public function index(Request $request)
 	{
       if ($request->isMethod('get'))
         {
           $this->data['roles'] = $this->getRoles();
+          $this->data['types'] = $this->getTypes();
           $this->data['items'] = Question::where('enabled',1)->get();
           return view('pages.question.index', $this->data);
         }
@@ -34,36 +43,27 @@ class QuestionController extends Controller {
   	if ($request->isMethod('get'))
     {
       $this->data['roles'] = $this->getRoles();
+      $this->data['types'] = $this->getTypes();
       $this->data['items'] = Question::where('enabled',1)->get();
         return view('pages.question.create', $this->data);
     }
     elseif ($request->isMethod('post'))
     {
       $data = $request->all();
-      if(!array_key_exists ('helptext', $request->all()))
-      {
-          $request->all()['helptext']= '-';
-      }
-      Question::create([
-          'title' => $data['title'],
-          'content' => $data['content'],
-          'helptext' => $data['helptext'],
-          'score' => $data['score'],
-          'role' => $data['role']
-        ]);
+
+      if(!isset($data['helptext']))
+          $data['helptext']=null;
+
+      Question::create($data);
         return redirect('question');
     }
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function detail($id)
   {
     $this->data['item'] = Question::find($id);
     $this->data['roles'] = $this->getRoles();
+    $this->data['types'] = $this->getTypes();
     if($this->data['item'])
         return view('pages.question.detail', $this->data);
     else
@@ -76,8 +76,11 @@ class QuestionController extends Controller {
     if ($request->isMethod('get'))
     {
         $this->data['roles'] = $this->getRoles();
+        $this->data['types'] = $this->getTypes();
         $this->data['items'] = Question::get();
         $this->data['old'] = Question::find($id);
+
+
         if($this->data['old'])
             return view('pages.question.update', $this->data);
         else
@@ -86,17 +89,12 @@ class QuestionController extends Controller {
     elseif ($request->isMethod('post'))
     {
         $row = Question::find($id);
+
         $row->update($request->all());
         return redirect('question/detail/'.$id);
     }
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function delete($id)
 	{
 

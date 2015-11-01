@@ -19,8 +19,8 @@ class CreateQuestionsTable extends Migration {
 			$table->string('content')->nullable();
 			$table->string('helptext')->nullable();
 			$table->integer('eventid')->nullable();
-			$table->integer('score')->nullable();
 			$table->integer('role')->nullable();
+			$table->integer('type')->nullable();
 			$table->boolean('enabled')->nullable();
 			$table->softDeletes();
             $table->nullableTimestamps();

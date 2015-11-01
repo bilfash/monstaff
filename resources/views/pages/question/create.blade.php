@@ -38,12 +38,18 @@
                               <textarea class="form-control" rows="3" placeholder="Teks Pembantu" name='helptext' >-</textarea>
                           </div>
                         </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-4 control-label">Skor</label>
-                                <div class="col-sm-7">
-                                    <input type="number" name="score" class="form-control" placeholder="Skor.." required>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">Tipe Pertanyaan</label>
+                            <div class="col-sm-7">
+                              <select class="form-control select2" data-placeholder="Ditujukan Untuk..." name='role' style="width: 100%;">
+                                @foreach ($types as $type)
+                                  <option value='{{ $type['id'] }}'>
+                                    {{ $type['value'] }}
+                                  </option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                       <div class="form-group">
                           <label for="inputEmail3" class="col-sm-4 control-label">Ditujukan Untuk</label>
                           <div class="col-sm-7">

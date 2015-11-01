@@ -2,6 +2,11 @@
 @section('content')
 @include('partials.flash-overlay-modal')
 
+<!-- TODO
+  - CONTENT
+  - SCORE (PERSENTASE)
+  - ROLE DI PERTANYAAN
+ -->
 <section class="content-header">
     <h1>Event</h1>
 </section>
