@@ -28,14 +28,14 @@
                             </tr>
                             <tr>
                                 <th class="col-md-3">Isi Pertanyaan</th>
-                                <td>{{ $item->content }}</td>
+                                <td><?php echo htmlspecialchars_decode($item->content) ?></td>
                             </tr>
                             <tr>
                                 <th class="col-md-3">Teks Pendukung / <i>Help Text</i></th>
                                 <td>{{ $item->helptext }}</td>
                             </tr>
                             <tr>
-                                <th class="col-md-3">Ditujukan Untuk/<i>Help Text</i></th>
+                                <th class="col-md-3">Ditujukan Untuk</th>
                                 <td>
                                   <!--  TODO -->
                                   @if($item->role==1)

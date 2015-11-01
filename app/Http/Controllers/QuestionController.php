@@ -22,7 +22,7 @@ class QuestionController extends Controller {
   public function getTypes()
   {
       return [
-            ['id'=>1,'value'=>'Kuantitatif ( 1 - 5 )'],
+            ['id'=>1,'value'=>'Kuantitatif ( angka )'],
             ['id'=>2,'value'=>'Deskriptif']
           ];
   }
@@ -84,7 +84,7 @@ class QuestionController extends Controller {
         if($this->data['old'])
             return view('pages.question.update', $this->data);
         else
-            return redirect('user');
+            return redirect('question');
     }
     elseif ($request->isMethod('post'))
     {

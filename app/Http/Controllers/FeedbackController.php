@@ -16,10 +16,16 @@ class FeedbackController extends Controller {
 		return view('pages.feedback.index', $this->data);
 	}
 
-  public function delete($id)
+  	public function delete($id)
 	{
 		$feedback = Feedback::find($id);
 		$feedback->delete();
 		return redirect('feedback');
+	}
+
+	public function detail($id)
+	{
+		$feedback = Feedback::find($id);
+		return view('pages.feedback.detail', $this->data);
 	}
 }

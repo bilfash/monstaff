@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-4 control-label">Isi Pertanyaan</label>
                             <div class="col-sm-7">
-                              <textarea class="form-control" rows="3" placeholder="Isi Pertanyaan..." name='content' >{{ $old->content }}</textarea>
+                              <textarea class="form-control wysih" rows="3" placeholder="Isi Pertanyaan..." name='content' >{{ $old->content }}</textarea>
                           </div>
                         </div>
                         <div class="form-group">
@@ -41,9 +41,9 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-4 control-label">Tipe Pertanyaan</label>
                             <div class="col-sm-7">
-                              <select class="form-control select2" data-placeholder="Ditujukan Untuk..." name='role' style="width: 100%;">
+                              <select class="form-control" data-placeholder="Ditujukan Untuk..." name='role' style="width: 100%;">
                                 @foreach ($types as $type)
-                                  <option value='{{ $type['id'] }}'>
+                                  <option value='{{ $type['id'] }}' @if( $type['id'] == $old->type) {{'selected'}} @endif>
                                     {{ $type['value'] }}
                                   </option>
                                 @endforeach
@@ -53,11 +53,11 @@
                       <div class="form-group">
                           <label for="inputEmail3" class="col-sm-4 control-label">Ditujukan Untuk</label>
                           <div class="col-sm-7">
-                            <select class="form-control select2" data-placeholder="Select a State" style="width: 100%;">
+                            <select class="form-control" data-placeholder="Select a State" style="width: 100%;">
                               @foreach ($roles as $role)
                                 <option value='{{ $role['id'] }}'
                                   @if($role['id']==$old->role)
-                                    selected='selected'
+                                    {{"selected='selected'"}}
                                   @endif
                                 >
                                   {{ $role['value']}}
@@ -120,5 +120,6 @@
 @section('custom_foot')
     <script type="text/javascript">
         $(".select2").select2();
+        $(".wysih").wysihtml5();
     </script>
 @stop

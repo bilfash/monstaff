@@ -33,7 +33,9 @@
                                 <td class="text-center">{{ $i++ }}</td>
                                 <td><a href="{{ URL::to('department/detail/' . $item->id) }}" title="">{{ $item->user->name }}</a></td>
                                 <td>
-                                  {{$item->content}}
+                                    <blockquote>
+                                        <p>{{$item->content}}</p>
+                                    </blockquote>
                                 </td>
                                 <td class="text-center">
                                     <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal{{$i}}"><span class="glyphicon glyphicon-remove"></span></button>
