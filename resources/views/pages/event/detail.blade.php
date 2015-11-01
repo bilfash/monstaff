@@ -18,7 +18,8 @@
                     <a href="{{ URL::to('event/delete/' . $item->id) }}" class="btn btn-danger"title="Hapus"><span class="glyphicon glyphicon-remove"></span></a>
                     @endif
                     <a href="{{ URL::to('event') }}" class="btn btn-default" title="Kembali ke Daftar"><span class="glyphicon glyphicon-list"></span></a>
-                    <a href="{{ URL::to('event/ '.$item->id.'/update/score') }}" class="btn btn-success" title="Tambah">Ubah Skor Pertanyaan</a>
+                    <a href="{{ URL::to('event/detail/'.$item->id.'/question') }}" class="btn btn-warning" title="Tambah">Ubah Daftar Pertanyaan</a>
+                    <a href="{{ URL::to('event/detail/'.$item->id.'/score') }}" class="btn btn-success" title="Tambah">Ubah Skor Pertanyaan</a>
                     <br><br>
                     @if ($item != null)
                     <table class="table table-striped table-hover table-bordered">
@@ -43,22 +44,25 @@
                                 <th class="col-md-3">Banyak Pertanyaan</th>
                                 <td> {{$item->question->count()}} </td>
                             </tr>
-                            <tr>
-                                <th class="col-md-3">Ditambahkan Oleh</th>
-                                <td> <!-- TODO --> </td>
-                            </tr>
                         </tbody>
                     </table>
                     @endif
                     @if ($item->question != null)
                     <?php $i=1?>
+                    <br>
                     <h4>Detail Pertanyaan</h4>
                     <table class="table">
                         <tbody>
                             @foreach($item->question as $pivot)
                             <tr>
-                                <th class="col-md-1">{{ $i++ }}</th>
-                                <td class="col-md-3"><a href="{{ URL::to('question/detail/' . $pivot->id) }}" title="">{{ $pivot->title }}</a></td>
+                                <th >{{ $i++ }}</th>
+                                <td ><a href="{{ URL::to('question/detail/' . $pivot->id) }}" title="">{{ $pivot->title }}</a></td>
+                                <td ><?php echo htmlspecialchars_decode($pivot->content) ?></td>
+                                <td > 
+                                    @if($pivot->role == 1) {{'PH'}}
+                                    @elseif($pivot->role == 2) {{'Staff'}}
+                                    @endif
+                                </td>
                             </tr>
                             @endforeach
                     </table>

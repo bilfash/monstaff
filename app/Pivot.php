@@ -5,9 +5,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Pivot extends Model {
 
-
-  	use SoftDeletes;
-
   	protected $table = 'pivots';
     protected $primaryKey = 'id';
     public $timestamps = true;
@@ -18,9 +15,6 @@ class Pivot extends Model {
         'score'
     );
 
-    protected $softDelete = true;
-    protected $dates = ['deleted_at'];
-
     public function event()
     {
         return $this->belongsTo('App\Event', 'eventid')->withTimestamps();
@@ -28,7 +22,7 @@ class Pivot extends Model {
 
     public function question()
     {
-        return $this->belongsTo('App\Question', 'questionid')->withTimestamps();
+        return $this->belongsTo('App\Question', 'questionid');
     }
 
 }

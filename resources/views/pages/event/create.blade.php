@@ -29,7 +29,7 @@
                           <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
                             <div class="input-group">
-                              <input type="date" class="form-control pull-right" id="reservationtime" name='start'>
+                              <input id="datepicker1" type="text" class="form-control pull-right" id="reservationtime" name='start'>
                             </div><!-- /.input group -->
                           </div>
                         </div>
@@ -38,7 +38,7 @@
                           <!-- TODO ubah format -->
                           <div class=' col-sm-7'>
                             <div class="input-group">
-                              <input type="date" class="form-control pull-right" id="reservationtime" name='end'>
+                              <input id="datepicker2" type="text" class="form-control pull-right" id="reservationtime" name='end'>
                             </div><!-- /.input group -->
                           </div>
                         </div>
@@ -85,7 +85,7 @@
                             @foreach($items as $item)
                             <tr>
                                 <td>{{$i++}}</td>
-                                <td><a href="{{ URL::to('position/detail/' . $item->id) }}" title=""> {{ $item->name }}</a></td>
+                                <td><a href="{{ URL::to('event/detail/' . $item->id) }}" title=""> {{ $item->name }}</a></td>
                                 <td>{{$item->assignedby}}</td>
                                 <!--  TODO -->
                             </tr>
@@ -94,7 +94,7 @@
                     </table>
                 </div><!-- /.box-body -->
             </div><!-- /.box -->
-        </div><!-- /.box -->
+        </div>
     </div>
 </section>
 
@@ -106,6 +106,9 @@
 
         //Initialize Select2 Elements
         $(".select2").select2();
+
+        $("#datepicker1").datepicker();
+        $("#datepicker2").datepicker();
 
         //Datemask dd/mm/yyyy
         $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});

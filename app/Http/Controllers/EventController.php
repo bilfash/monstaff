@@ -97,4 +97,55 @@ class EventController extends Controller {
 			return redirect('event');
 	}
 
+	public function score(Request $request,$id)
+	{
+		if ($request->isMethod('get')){
+
+			$this->data['items'] = Pivot::where('eventid',$id)->get();
+			if($this->data['items'])
+				return view('pages.event.score', $this->data);
+			else
+				return redirect('event');
+
+		} else {
+			$data = $request->all();
+			foreach ($data['score'] as $key => $value) {
+				$item = Pivot::find($key);
+				$item->score = $value;
+				$item->save();
+			}
+			return redirect('event/detail/'.$id);
+		}
+	}	
+
+	public function question(Request $request,$id)
+	{
+		if ($request->isMethod('get')){
+			$this->data['items'] = Pivot::where('eventid', $id)->where('deleted_at', null)->get();
+			$this->data['questions'] = Question::get();
+			return view('pages.event.question', $this->data);
+		} else {
+			// dd($request->all());
+			$data = $request->all();
+			$event = Event::find($id);
+            if($event){
+              	if( array_key_exists ('delete', $data) ){
+              		foreach ($data['delete'] as $key => $value) {
+              			$item  =  Pivot::find($value);
+              			$item->delete();
+              		}
+              	}
+              	if( array_key_exists ('pivot', $data) ){
+                	foreach ($data['pivot'] as $key => $value) {
+              			$item  =  new Pivot;
+              			$item->eventid = $id;
+              			$item->questionid = $value;
+              			$item->save();
+              		}
+              	}
+            }
+			return redirect('event/detail/'.$id);
+		}
+	}
+
 }

@@ -47,9 +47,9 @@
                                 <td class="text-center">{{ $i++ }}</td>
 
                                 <td><a href="{{ URL::to('event/detail/' . $item->id) }}" title="">{{ $item->name }}</a></td>
-                                <td> {{ $item->enabled ? ' $pivots->pivot->event ' : '-' }} </td>
+                                <td class="text-center"> {{  count($pivots) }} </td>
 
-                                <td> {{ $item->enabled ? ' Ya ' : 'Tidak' }} </td>
+                                <td class="text-center"> {{ $item->enabled ? ' Ya ' : 'Tidak' }} </td>
 
                                 <td class="text-center">
                                 <a href="{{ URL::to('event/update/' . $item->id) }}" class="btn btn-primary btn-xs"title="Sunting"><span class="glyphicon glyphicon-pencil"></span></a>
