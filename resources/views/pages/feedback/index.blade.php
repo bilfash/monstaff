@@ -34,7 +34,7 @@
                                 <td><a href="{{ URL::to('department/detail/' . $item->id) }}" title="">{{ $item->user->name }}</a></td>
                                 <td>
                                     <blockquote>
-                                        <p>{{$item->content}}</p>
+                                        <p><?php echo htmlspecialchars_decode($item->content) ?></p>
                                     </blockquote>
                                 </td>
                                 <td class="text-center">

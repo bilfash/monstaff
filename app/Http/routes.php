@@ -29,7 +29,7 @@ Route::filter('nondep', function()
 
 Route::filter('staff', function()
 {
-    if (Auth::user()->position->name != 'Staff')
+    if (Auth::user()->department->id < 2)
     {
         return Redirect::to('/');
     }
@@ -102,9 +102,9 @@ Route::group(['middleware' => 'auth','before' => 'nondep'], function () {
     Route::post('event/detail/{id}/question', array('before' =>'csrf', 'uses' => 'EventController@question'));
 
     //mark
-    Route::get('mark','MarkController@index');
-    Route::get('mark/detail/{id}','MarkController@index');
-    Route::get('score','ScoreController@index');
+    Route::get('mark', 'ViewMarkController@wakahima');
+    Route::get('mark/{id}/{userid}', 'ViewMarkController@detail');
+    Route::post('mark', array('before' =>'csrf', 'uses' => 'ViewMarkController@wakahima'));
 
     //question
     Route::get('question','QuestionController@index');
@@ -123,7 +123,17 @@ Route::group(['middleware' => 'auth','before' => 'staff'], function () {
 	//dashboard
     Route::get('dept', 'DeptController@index');
 
-    
-    Route::get('question/update/{id}','QuestionController@update');
-    Route::post('question/update/{id}', array('before' =>'csrf', 'uses' => 'QuestionController@update'));
+    //feedback
+    Route::get('feedback/create', 'FeedbackController@create');
+    Route::post('feedback/create', array('before' =>'csrf', 'uses' => 'FeedbackController@create'));
+
+    // view mark
+    Route::get('marks', 'ViewMarkController@dept');
+    Route::post('marks', array('before' =>'csrf', 'uses' => 'ViewMarkController@dept'));
+
+    //submit nilai
+    Route::get('submit/{id}', 'SubmitController@submit');
+    Route::post('submit/{id}', array('before' =>'csrf', 'uses' => 'SubmitController@staff'));
+    Route::get('submit/{id}/{userid}', 'SubmitController@yes');
+    Route::post('submit/{id}/{userid}', array('before' =>'csrf', 'uses' => 'SubmitController@yes'));
 });

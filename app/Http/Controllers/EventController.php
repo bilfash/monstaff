@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Auth;
 use Input;
 use App\Event;
+use App\Score;
+use App\User;
 use App\Question;
 use App\Pivot;
 
@@ -33,7 +35,18 @@ class EventController extends Controller {
 				{
             $data = $request->all();
 
-					  $event = Event::create($request->all());
+			$event = Event::create($request->all());
+
+			$user = User::where('positionid',1)->get();
+			foreach ($user as $lala) {
+				$item = new Score;
+				$item->eventid = $event->id;
+				$item->score = 0;
+				$item->userid = $lala->id;
+				$item->save();
+			}
+
+
             if($event)
             {
               if( array_key_exists ('questions', $data) ){

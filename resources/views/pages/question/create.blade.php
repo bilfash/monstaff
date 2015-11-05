@@ -95,10 +95,8 @@
                                 <td><a href="{{ URL::to('question/detail/' . $item->id) }}" title="">{{ $item->title }}</a></td>
                                 <td><!--  TODO -->
                                 @if($item->role==1)
-                                  Semua Fungsionaris
-                                @elseif($item->role==2)
                                   Pengurus Harian
-                                @else
+                                @elseif($item->role==2)
                                   Staff
                                 @endif</td>
                                 <td>

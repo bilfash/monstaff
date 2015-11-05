@@ -1,9 +1,8 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use Request;
+use Input;
 use App\Feedback;
 use App\User;
 
@@ -27,5 +26,19 @@ class FeedbackController extends Controller {
 	{
 		$feedback = Feedback::find($id);
 		return view('pages.feedback.detail', $this->data);
+	}
+
+	public function create()
+	{
+
+		if (Request::isMethod('get')) 
+        {
+            return view('pages.feedback.create');
+        }        
+        elseif (Request::isMethod('post')) 
+        {
+        	$feedback = Feedback::create(Input::all());
+            return redirect('/');
+        }
 	}
 }

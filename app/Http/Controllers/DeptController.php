@@ -4,6 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Event;
+use App\Flag;
 
 class DeptController extends Controller {
 
@@ -14,7 +17,13 @@ class DeptController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$this->data['items'] = Event::where('enabled', 1)->first();
+		$cek = Flag::where('eventid' , $this->data['items']->id )->where('from' , Auth::id())->where('to' , Auth::id())->first();
+		if($cek != null){
+			$this->data['items'] = null;
+			// dd($cek);
+		}
+		return view('pages.dept.dashboard', $this->data);
 	}
 
 	/**

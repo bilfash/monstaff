@@ -47,7 +47,7 @@
                                 <td class="text-center">{{ $i++ }}</td>
 
                                 <td><a href="{{ URL::to('event/detail/' . $item->id) }}" title="">{{ $item->name }}</a></td>
-                                <td class="text-center"> {{  count($pivots) }} </td>
+                                <td class="text-center"> {{  count($item->question) }} </td>
 
                                 <td class="text-center"> {{ $item->enabled ? ' Ya ' : 'Tidak' }} </td>
 

@@ -13,9 +13,8 @@ class QuestionController extends Controller {
 	public function getRoles()
   {
       return [
-            ['id'=>1,'value'=>'Semua Fungsionaris'],
-            ['id'=>2,'value'=>'Pengurus Harian'],
-            ['id'=>3,'value'=>'Staff']
+            ['id'=>1,'value'=>'Pengurus Harian'],
+            ['id'=>2,'value'=>'Staff']
           ];
   }
 
@@ -73,6 +72,7 @@ class QuestionController extends Controller {
 
 	public function update(Request $request, $id)
 	{
+    // dd('a//sfsaf');
     if ($request->isMethod('get'))
     {
         $this->data['roles'] = $this->getRoles();

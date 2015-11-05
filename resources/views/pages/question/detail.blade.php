@@ -38,13 +38,9 @@
                                 <th class="col-md-3">Ditujukan Untuk</th>
                                 <td>
                                   <!--  TODO -->
-                                  @if($item->role==1)
-                                    Semua Fungsionaris
-                                  @elseif($item->role==2)
-                                    Pengurus Harian
-                                  @else
-                                    Staff
-                                  @endif</td>
+                                  @if($item->role == 1) {{'PH'}}
+                                    @elseif($item->role == 2) {{'Staff'}}
+                                    @endif</td>
                             </tr>
                             <tr>
                                 <th class="col-md-1">Enabled</th>

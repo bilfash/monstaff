@@ -56,23 +56,6 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                          <label for="inputEmail3" class="col-sm-4 control-label">Question</label>
-                          <!-- TODO ubah format -->
-                          <div class=' col-sm-7'>
-                              <select class="form-control select2" multiple="multiple" data-placeholder="You may select this later" style="width: 100%;" name='questions[]' value='$lala->pivots->id'>
-                              @foreach($questions as $q)
-                                <option style="width: 100%;" value='{{$q->id}}'
-                                  @if( in_array( $q->id, (array)$lala->question))
-                                    selected='true'
-                                  @endif
-                                  >
-                                    {{ $q->title }}
-                                </option>
-                              @endforeach
-                            </select>
-                          </div>
-                        </div>
                     </div><!-- /.box-body -->
                     <div class="box-footer">
                         <div class="col-sm-4">

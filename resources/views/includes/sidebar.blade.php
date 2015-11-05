@@ -155,42 +155,24 @@
             </ul>
         </li>
         <li class="treeview" >
-            <a href="#">
+            <a href="{{ URL::to('mark') }}">
                 <i class="fa fa-folder"></i>
                 <span>Nilai</span>
-                <i class="fa fa-angle-left pull-right"></i>
             </a>
-            <ul class="treeview-menu">
-                <li>
-                    <a href="{{ URL::to('score') }}">
-                        <i class="fa fa-angle-double-right"></i>
-                        Lihat Penilaian
-                    </a>
-                </li>
-            </ul>
-            <ul class="treeview-menu">
-                <li>
-                    <a href="{{ URL::to('mark/create') }}">
-                        <i class="fa fa-angle-double-right"></i>
-                        Beri Nilai
-                    </a>
-                </li>
-            </ul>
-            <ul class="treeview-menu">
-                <li>
-                    <a href="{{ URL::to('mark/answers') }}">
-                        <i class="fa fa-angle-double-right"></i>
-                        Lihat Jawaban
-                    </a>
-                </li>
-            </ul>
         </li>
     @else
 
         <li class="treeview" >
-            <a href="{{ URL::to('feedback') }}">
+            <a href="{{ URL::to('feedback/create') }}">
                 <i class="fa fa-folder"></i>
-                <span>{{ Departemen }}</span>
+                <span>Beri Feedback</span>
+            </a>
+        </li>
+
+        <li class="treeview" >
+            <a href="{{ URL::to('marks') }}">
+                <i class="fa fa-folder"></i>
+                <span>Lihat Nilai</span>
             </a>
         </li>
 
