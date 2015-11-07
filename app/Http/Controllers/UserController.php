@@ -116,7 +116,7 @@ class UserController extends Controller {
         {
             $user = User::find($id);
             $user->update(Input::all());
-            return redirect('user/detail/'.$id);
+                return redirect('user');
         }
 	}
 

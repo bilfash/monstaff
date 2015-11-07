@@ -87,6 +87,7 @@ class SubmitController extends Controller {
 				if($question->type == 1){
 					$pivot = Pivot::where('eventid',$id)->where('questionid',$key)->first();
 					$score->score += ($value * $pivot->score / 100);
+					$score->save();
 				}
 			}
 		} else {
@@ -100,10 +101,11 @@ class SubmitController extends Controller {
 				if($question->type == 1){
 					$pivot = Pivot::where('eventid',$id)->where('questionid',$key)->first();
 					$score->score += ($value * $pivot->score / 100);
+					$score->save();
 				}
 			}
 		}
-		$score->save();
+		
 
 		//set ke flag
 		$flag = new Flag;
@@ -184,6 +186,7 @@ class SubmitController extends Controller {
 					if($question->type == 1){
 						$pivot = Pivot::where('eventid',$id)->where('questionid',$key)->first();
 						$score->score += ($value * $pivot->score / 100);
+						$score->save();
 					}
 				}
 			} else {
@@ -197,10 +200,10 @@ class SubmitController extends Controller {
 					if($question->type == 1){
 						$pivot = Pivot::where('eventid',$id)->where('questionid',$key)->first();
 						$score->score += ($value * $pivot->score / 100);
+						$score->save();
 					}
 				}
 			}
-			$score->save();
 
 			//set ke flag
 			$flag = new Flag;

@@ -52,7 +52,7 @@
                                 <td> <a href="{{URL::to('mark').'/'.$id.'/'.$item->user->id}}"> {{ $item->user->username }}</a></td>
                                 <td>{{ $item->user->name }}</td>
                                 <td>{{ $item->user->department->name }}</td>
-                                <td class="text-center">{{ $item->score</td>
+                                <td class="text-center">{{ $item->score }}</td>
                             </tr>
                         @endforeach
                         </tbody>
